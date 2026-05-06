@@ -1,0 +1,434 @@
+body {
+    font-family: Garamond, serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+/* ===== Header / Navbar ===== */
+header {
+    background-color: rgba(255, 255, 255, 0.983);
+    padding: 10px 5px;
+    position: relative;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+/* =========================================
+   LEFT
+========================================= */
+.nav-left img {
+    height: 100px;
+    width: auto;
+    cursor: pointer;
+    margin-left: 20px;
+    max-width: 100%;
+    padding-left: 20px;
+}
+
+
+/* =========================================
+   CENTER
+========================================= */
+.nav-center {
+    position: absolute;
+    left: 14%;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.nav-center a,
+.nav-center a:visited,
+.nav-center a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-center h1 {
+    margin: 0;
+    font-size: 2em;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.nav-center h1:hover {
+    color: #ffba26de;
+}
+
+
+/* =========================================
+   RIGHT
+========================================= */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    padding-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.288);
+    font-size: 1.5em;
+    padding: 8px 20px;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+nav ul li a.active {
+    color: rgb(0, 0, 0);
+}
+
+a[href^="tel"] {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px 25px;
+    }
+
+    .nav-left img {
+        height: 80px;
+        margin-left: 10px;
+    }
+
+    .nav-center {
+        left: 16%;
+    }
+
+    .nav-center h1 {
+        font-size: 1.6em;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+        padding: 8px 12px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-left {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-left img {
+        height: 75px;
+        margin-left: 0;
+    }
+
+    .nav-center {
+        position: static;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-center h1 {
+        font-size: 1.5em;
+        white-space: normal;
+    }
+
+    .nav-right {
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1.1em;
+        padding: 6px 10px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+@media (max-width: 480px) {
+    .nav-left img {
+        height: 65px;
+    }
+
+    .nav-center h1 {
+        font-size: 1.2em;
+        letter-spacing: 0.5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        padding: 4px 0;
+    }
+}
+
+
+/* ===== Contact Hero ===== */
+.contact-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    min-height: 250px;
+    padding: 60px 20px;
+
+    background-image: url("../images/main/test.jpg");
+    background-size: cover;
+    background-position: center 60%;
+}
+
+.contact-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.695);
+    z-index: 1;
+}
+
+.contact-hero h2 {
+    position: relative;
+    font-size: 3rem;
+    margin: 0;
+    color: white;
+    z-index: 2;
+}
+
+/* ===== Layout ===== */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 60px 10%;
+    flex-wrap: wrap;
+}
+
+/* ===== Contact Info ===== */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    min-width: 100px;
+}
+
+.info-value,
+.info-valuep {
+    font-size: 1.2em;
+    color: #111;
+    text-align: right;
+    flex: 1;
+}
+
+.info-value {
+    font-weight: 500;
+}
+
+.info-valuep {
+    font-weight: bold;
+}
+
+/* ===== About Link ===== */
+
+.about-link {
+    text-align: center;
+}
+
+.about-link p {
+    font-size: 1.5em;
+}
+.about-link a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #111;
+    padding: 12px 22px;
+    transition: all 0.3s ease-in-out;
+   
+}
+
+.about-link a:hover {
+    color: #ffba26;
+}
+
+/* ===== Contact Form ===== */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Garamond, serif;
+    font-size: 1em;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    background-color: rgba(128, 128, 128, 0.14);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: rgba(255, 186, 38, 0.8);
+    box-shadow: 0 0 10px rgba(255, 186, 38, 0.2);
+    background-color: #fff;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 14px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: rgba(255, 186, 38, 0.8);
+    color: black;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Status message */
+#form-status {
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+    .contact-form,
+    .contact-info {
+        padding: 30px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px 14px;
+    }
+
+    .contact-form button {
+        padding: 12px 16px;
+    }
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: rgba(0, 0, 0, 0.832);
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

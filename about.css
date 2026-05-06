@@ -1,0 +1,192 @@
+.about-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    min-height: 250px;
+    padding: 50px 20px;
+
+    background-image: url("../images/aboutimg/tuningii.jpeg");
+    background-size: cover;
+    background-position: center 70%;
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.695);
+    z-index: 1;
+}
+
+.about-hero h2,
+.about-hero p {
+    position: relative;
+    color: white;
+    z-index: 2;
+}
+
+.about-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.about-hero p {
+    font-size: 1.8rem;
+}
+
+/* ===== About Layout ===== */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 30px 10% 50px;
+    flex-wrap: wrap;
+    background-color: #fbfbfb1c;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h3 {
+    margin-top: 30px;
+    font-size: 1.4rem;
+}
+
+.about-text p {
+    line-height: 1.7;
+    margin-top: 15px;
+    color: #333;
+}
+
+/* line under headings */
+.about-text .line {
+    height: 1px;
+    background-color: #ffba26;
+    margin: 10px 0;
+}
+
+/* image */
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ===== BOOK NOW BUTTON (MATCH CONTACT FORM BUTTON) ===== */
+.about-button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.about-button .btn {
+    display: inline-block;
+    padding: 14px 20px;
+    margin-top: 20px;
+    margin-bottom:  55px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.about-button .btn:hover {
+    background-color: rgba(255, 186, 38, 0.8);
+    color: black;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+/* ===== Values Section (kept, cleaned) ===== */
+.values-section {
+    background-color: #fafafa;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.values-section h2 {
+    font-size: 2.3rem;
+    margin-bottom: 50px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.value-card {
+    padding: 30px;
+    border: 1px solid #ddd;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    border-color: #1c5212;
+    transform: translateY(-5px);
+}
+
+.value-card h4 {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.value-card h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    background-color: #ffba26;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: rgba(0, 0, 0, 0.832);
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* ===== Links ===== */
+.about-link a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3em;
+    color: #111;
+    transition: all 0.3s ease-in-out;
+}
+
+.about-link a:hover {
+    color: #ffba26;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column-reverse;
+    }
+}
