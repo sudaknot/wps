@@ -229,7 +229,7 @@ a[href^="tel"] {
     min-height: 250px;
     padding: 60px 20px;
 
-    background-image: url("../images/main/test.jpg");
+    background-image: url("test.jpg");
     background-size: cover;
     background-position: center 60%;
 }
