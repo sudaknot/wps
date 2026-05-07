@@ -868,3 +868,143 @@ align-items: center;
         font-size: 1em;
     }
 }
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    /* =========================
+       HERO (FIXED IOS GAP ISSUE)
+       ========================= */
+    .hero {
+        height: 100dvh;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .hero-image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* =========================
+       HERO OVERLAY (SPACING FIXED)
+       ========================= */
+    .hero-contact-overlay {
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        max-width: 380px;
+
+        padding: 24px 26px;
+    }
+
+    .hero-contact-overlay .contact-info {
+        gap: 14px;
+    }
+
+    .hero-contact-overlay .info-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+        border-bottom: 1px solid #00000055;
+    }
+
+    .hero-contact-overlay .info-label {
+        font-size: 0.95rem;
+        letter-spacing: 0.4px;
+        min-width: 80px;
+    }
+
+    .hero-contact-overlay .info-value,
+    .hero-contact-overlay .info-valuep,
+    .info-item a {
+        font-size: 1.05rem;
+    }
+
+    .hero-contact-overlay .about-link {
+        margin-top: 16px;
+    }
+
+    .hero-contact-overlay .about-link a {
+        font-size: 1.05rem;
+    }
+
+    /* =========================
+       SERVICES SECTION
+       ========================= */
+    .services-section {
+        padding-top: 30px;
+    }
+
+    .services-section h2 {
+        font-size: 2rem;
+        padding-bottom: 30px;
+        margin-bottom: 0;
+    }
+
+    /* =========================
+       STORY SECTION
+       ========================= */
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-text {
+        padding: 40px 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .story-text h1,
+    .story-text.dark h1 {
+        font-size: 2.2rem;
+    }
+
+    .story-text.dark p {
+        font-size: 1.1rem;
+    }
+
+    /* IMAGE HEIGHT FIX (kids1 issue) */
+    .story-image1 {
+        height: 420px;
+    }
+
+    .story-image {
+        height: 380px;
+    }
+
+    .story-image1 img,
+    .story-image img {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* =========================
+       CTA SECTION
+       ========================= */
+    .ctasection {
+        padding-top: 60px;
+    }
+
+    .ctasection h1 {
+        font-size: 2.3rem;
+    }
+
+    /* =========================
+       HOME BIO
+       ========================= */
+    .home-bio {
+        height: 320px;
+    }
+
+    .home-bio p {
+        font-size: 1.8rem;
+        padding: 40px;
+    }
+}
