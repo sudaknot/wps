@@ -111,7 +111,10 @@ nav ul li a.active {
 ========================================= */
 @media (max-width: 1024px) {
     header {
-        padding: 10px 25px;
+        padding-top: 10px;
+        padding-left: 0px;
+        padding-bottom: 10px;
+        align-items: center;
     }
 
     .nav-left img {
@@ -143,9 +146,10 @@ nav ul li a.active {
 ========================================= */
 @media (max-width: 768px) {
     header {
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         padding-left: 0px;
+        align-items: center;
     }
 
     .navbar {
@@ -198,7 +202,9 @@ nav ul li a.active {
 ========================================= */
 @media (max-width: 480px) {
     header {
-        padding: 15px 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 0px;
     }
 
     .navbar {
