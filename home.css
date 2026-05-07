@@ -809,6 +809,10 @@ align-items: center;
         padding: 30px;
     }
 
+    .contact-form button {
+        padding: 12px 16px;
+    }
+
     
 }
 
