@@ -14,6 +14,11 @@
     background-position: center 70%;
 }
 
+a[href^="mailto"] {
+    color: inherit;
+    text-decoration: none;
+}
+
 .about-hero::before {
     content: "";
     position: absolute;
