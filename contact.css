@@ -241,6 +241,18 @@ a[href^="tel"] {
     }
 }
 
+@media screen and (max-width: 480px) {
+   .info-label {
+        font-size: 0.9em;
+    }
+
+    .info-value,
+    .info-valuep,
+    .info-item a {
+        font-size: 1em;
+    }
+}
+
 footer {
     background-color: rgba(0, 0, 0, 0.832);
     color: white;
