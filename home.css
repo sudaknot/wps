@@ -811,6 +811,10 @@ align-items: center;
 /* SMALL MOBILE */
 @media (max-width: 480px) {
 
+    .hero {
+        position: relative;
+    }
+
     .story-text h1 {
         font-size: 1.8rem;
     }
