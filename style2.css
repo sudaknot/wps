@@ -216,19 +216,22 @@ nav ul li a.active {
    SMALL MOBILE
 ========================================= */
 @media (max-width: 480px) {
+    @media (max-width: 768px) {
+
     header {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 0px;
+        padding: 15px 0;
     }
 
     .navbar {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 15px;
+        gap: 12px;
+        width: 100%;
     }
 
+    /* LEFT */
     .nav-left {
         display: flex;
         justify-content: center;
@@ -236,32 +239,42 @@ nav ul li a.active {
     }
 
     .nav-left img {
-        height: 75px;
-        margin-left: 0;
+        height: 70px;
+        margin: 0;
+        padding: 0;
     }
 
+    /* CENTER */
     .nav-center {
         position: static;
         text-align: center;
+        width: 100%;
     }
 
     .nav-center h1 {
         font-size: 1.5em;
-        white-space: normal;
+        margin: 0;
     }
 
+    /* RIGHT */
     .nav-right {
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     nav ul {
+        display: flex;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
+        gap: 18px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
     }
 
     nav ul li a {
         font-size: 1.1em;
+        padding: 6px 10px;
     }
 }
 
