@@ -236,4 +236,14 @@ a[href^="tel"] {
     }
 }
 
+footer {
+    background-color: rgba(0, 0, 0, 0.832);
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 
