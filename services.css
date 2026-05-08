@@ -114,7 +114,7 @@ a[href^="mailto"] {
 
 /* ===== Headings ===== */
 .service-card h3 {
-    font-size: clamp(1.5rem, 1.8vw, 2.3rem);
+    font-size: clamp(1.5rem, 1.8vw, 2.4rem);
 
     margin:
         clamp(25px, 2vw, 40px);
@@ -140,7 +140,7 @@ a[href^="mailto"] {
 }
 
 .service-card h4 {
-    font-size: clamp(1.2rem, 1.3vw, 1.7rem);
+     font-size: clamp(1.1rem, 1.25vw, 1.6rem);
 
     margin:
         clamp(18px, 1.5vw, 28px);
@@ -153,9 +153,8 @@ a[href^="mailto"] {
 .service-card li {
     color: #333;
 
-    font-size: clamp(1.08rem, 1.35vw, 1.55rem);
-
-    line-height: 1.9;
+    font-size: clamp(0.95rem, 1.05vw, 1.25rem);
+    line-height: 1.8;
 }
 
 .service-card p {
@@ -249,9 +248,9 @@ footer {
 footer p,
 footer a,
 footer span {
-    font-size: clamp(1.05rem, 1.5vw, 1.75rem);
-    line-height: 2;
-    letter-spacing: 0.3px;
+     font-size: clamp(0.95rem, 1.2vw, 1.45rem);
+    line-height: 1.9;
+    letter-spacing: 0.2px;
 }
 
 /* ===== Tablet ===== */
