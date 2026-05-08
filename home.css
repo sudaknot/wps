@@ -19,9 +19,9 @@ a[href^="mailto"] {
 /* ===== FLOATING CONTACT OVERLAY ===== */
 .hero-contact-overlay {
     position: absolute;
-    top: 40%;
-    left: 12%;              /* pushes it slightly left */
-    transform: translateY(-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 5;
     background: rgba(255, 255, 255, 0.942);
     padding: 40px;
