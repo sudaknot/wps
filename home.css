@@ -493,7 +493,7 @@
 /* ===== Home Bio Section ===== */
 .home-bio {
     position: relative;   /* Needed for overlay positioning */
-    background-image: url("../images/main/stringsof.jpg");
+    background-image: url("stringsof.jpg");
     background-size: cover;
     background-position: center 35%;
     text-align: left;
