@@ -372,12 +372,28 @@ nav ul li a.active {
 /* ===== Footer ===== */
 
 
+
+
+/* ===== Footer ===== */
 footer {
     background-color: rgba(0, 0, 0, 0.832);
     color: white;
-    padding: 30px 40px;
+
+    padding:
+        clamp(35px, 4vw, 80px)
+        clamp(25px, 8vw, 140px);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     text-align: center;
+}
+
+footer p,
+footer a,
+footer span {
+    font-size: clamp(1.05rem, 1.5vw, 1.75rem);
+    line-height: 2;
+    letter-spacing: 0.3px;
 }
