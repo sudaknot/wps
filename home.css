@@ -163,15 +163,21 @@ a[href^="mailto"] {
 
 
 .service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     background: white;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     border-radius: 10px;
     border: 1px solid #ddd;
     overflow: hidden;
     transition: transform 0.3s ease;
-    height: 600px;
 }
 
+.service-card p,
+.service-card ul {
+    flex-grow: 1;
+}
 
 
 .service-card img {
