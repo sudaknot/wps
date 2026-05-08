@@ -1,3 +1,34 @@
+/* =========================
+   BASE
+   ========================= */
+
+html {
+    font-size: 16px;
+    background-color: #f0f0f08c;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f08c;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+    background-color: #f0f0f08c;
+}
+
+a[href^="mailto"] {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
 .hero {
     position: relative;
     width: 100%;
@@ -8,120 +39,35 @@
     width: 100%;
     object-fit: cover;
     display: block;
-    
 }
 
-a[href^="mailto"] {
-    color: inherit;
-    text-decoration: none;
-}
+/* =========================
+   HERO CONTACT OVERLAY
+   ========================= */
 
-/* ===== FLOATING CONTACT OVERLAY ===== */
 .hero-contact-overlay {
     position: absolute;
     top: 40%;
-    left: 12%;              /* pushes it slightly left */
+    left: 12%;
     transform: translateY(-50%);
     z-index: 5;
+
     background: rgba(255, 255, 255, 0.942);
     padding: 40px;
     border-radius: 14px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+
     max-width: 450px;
 }
 
-/* reuse your existing styling but ensure spacing works in overlay */
-.hero-contact-overlay .contact-info {
-    padding: 0;
-    margin: 0;
-    gap: 18px;
-}
-
-/* info rows */
-.hero-contact-overlay .info-item {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #00000088;
-}
-
-.hero-contact-overlay .info-item:last-child {
-    border-bottom: none;
-}
-
-.hero-contact-overlay .info-label {
-    font-size: 1.2em;
-    font-weight: 600;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    min-width: 90px;
-}
-
-.info-item a {
-    font-size: 1.4em;
-    color: #111;
-    text-align: right;
-    flex: 1;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-
-}
-
-.info-item a:hover {
-    color: #ffba26;
-}
-
-.hero-contact-overlay .info-value,
-.hero-contact-overlay .info-valuep {
-    font-size: 1.4em;
-    color: #111;
-    text-align: right;
-    flex: 1;
-}
-
-.h
-
-.hero-contact-overlay .info-value {
-    font-weight: 500;
-}
-
-
-
-/* About link inside overlay */
-.hero-contact-overlay .about-link {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.hero-contact-overlay .about-link p {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-}
-
-.hero-contact-overlay .about-link a {
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.4em;
-    color: rgba(0, 0, 0, 0.288);
-    padding: 10px 18px;
-    transition: all 0.3s ease-in-out;
-}
-
-.hero-contact-overlay .about-link a:hover {
-    color: #f8d300;
-}
-
-/* ===== Services Section ===== */
+/* =========================
+   SERVICES SECTION
+   ========================= */
 
 .services-section {
     padding: 50px 10%;
     background-color: #fafafa;
     text-align: center;
-    
 }
 
 .services-section h2 {
@@ -136,109 +82,36 @@ a[href^="mailto"] {
     color: #555;
 }
 
+/* =========================
+   SERVICES GRID (FIXED)
+   ========================= */
+
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    grid-template-rows: repeat(2, auto);   /* 2 rows */
+
+    /* DESKTOP: 3 columns */
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 30px;
+
+    max-width: 1900px;
+    margin: 0 auto;
 }
 
-.services-page,
-.secondary-services {
-    padding: 40px 10%;
-    background-color: #f0f0f08c; /* soft ivory */
-}
-
-
-
-.services-title,
-.secondary-services h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 80px;
-    position: relative;
-
-}
-
-
+/* =========================
+   SERVICE CARD
+   ========================= */
 
 .service-card {
     background: white;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     border-radius: 10px;
     border: 1px solid #ddd;
-    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+    overflow: visible; /* FIX: prevents cut-off text */
+    height: auto;      /* FIX: allows natural growth */
+
     transition: transform 0.3s ease;
-    height: 600px;
-}
-
-
-
-.service-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.service-card h3 {
-    position: relative;
-    font-size: 1.4rem;
-    margin: 20px;
-}
-
-.service-card h4 {
-    position: relative;
-    font-size: 1.2rem;
-    margin: 20px;
-    
-}
-
-
-.service-card h3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px; /* space below text */
-    width: 100%;
-    height: 1px;
-    background-color: rgba(255, 186, 38, 0.695);
-}
-
-.service-card p {
-    margin: 0 20px 20px 20px;
-    line-height: 1.1;
-    color: #333;
-    font-size: 1.2rem;
-}
-
-.service-card li {
-    margin: 0 20px 20px 20px;
-    line-height: 1.2;
-    color: #333;
-    font-size: 1.3rem;
-}
-
-.service-card ul {
-    margin: 0 0 20px 0;
-}
-
-
-.service-tier {
-    margin: 0 20px 20px 20px;
-}
-
-.service-tier h4 {
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-
-.service-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    cursor: default;
 }
 
 .service-card:hover {
@@ -247,764 +120,117 @@ a[href^="mailto"] {
     cursor: pointer;
 }
 
+/* IMAGE */
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* HEADINGS */
 .service-card h3 {
+    font-size: 1.4rem;
+    margin: 20px;
     position: relative;
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-    display: inline-block; /* keeps underline only under text */
 }
 
 .service-card h3::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px; /* space below text */
+    bottom: -5px;
     width: 100%;
     height: 1px;
     background-color: #ffba26;
 }
 
-.service-card .price {
-    font-weight: bold;
-    color: black;
+.service-card h4 {
+    font-size: 1.2rem;
+    margin: 20px;
 }
 
+/* TEXT */
 .service-card p {
-    color: #333;
+    margin: 0 20px 20px;
     line-height: 1.6;
+    font-size: 1.1rem;
+    color: #333;
 }
 
-.service-card-link, .service-card-link:visited, .service-card-link:active {
+.service-card li {
+    margin: 0 20px 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.service-card ul {
+    margin: 0 0 20px;
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.services-button {
+    text-align: center;
+    padding: 40px 20px 0;
+    background-color: #f0f0f08c;
+}
+
+.services-button .btn {
+    display: inline-block;
+    padding: 14px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
     text-decoration: none;
-    text-decoration: none;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.services-button .btn:hover {
+    background-color: rgba(255, 186, 38, 0.8);
     color: black;
 }
 
-
-
-/* MAIN SECTION */
-.story-section {
-    width: 100%;
-    margin: 0;
-    background: linear-gradient(to bottom, #fafafa, #f3f0ea);
-    
-}
-
-/* GRID LAYOUT */
-.story-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    align-items: center;
-    background-color: #1a1919;
-}
-
-/* TEXT BLOCKS */
-.story-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 80px 90px 150px 200px;
-    min-height: 400px;
-    position: relative;
-}
-
-/* Decorative accent line */
-.story-text::after {
-    content: "";
-    width: 400px;
-    height: 3px;
-    background-color: #1c5212a1;
-    margin-bottom: 25px;
-    border-radius: 4px;
-}
-
-/* Heading */
-.story-text h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1.15;
-    color: #111;
-    margin-bottom: 25px;
-    max-width: 550px;
-    letter-spacing: -1px;
-    
-}
-
-.ctasection {
-    background-color: #1a1919;
-    margin: 0;
-    padding-top: 100px;
-    padding-bottom: 20px;
-    align-items: center;
-    text-align: center;
-}
-
-
-.ctasection h1{
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1.15;
-    color: white;
-    letter-spacing: -1px;
-    
-
-}
-
-
-/* Paragraphs */
-.story-text p {
-    font-size: 1.15rem;
-    font-weight: 500;
-    line-height: 1.9;
-    color: #333;
-    max-width: 620px;
-}
-
-/* DARK BLOCK */
-.story-text.dark {
-    background-color: #1a1919;
-    color: white;
-}
-
-.story-text.dark h1,
-.story-text.dark p {
-    color: white;
-}
-
-.story-text.dark h1 {
-    font-size: 4em;
-}
-
-.story-text.dark p {
-    font-size: 1.5em;
-}
-
-.story-text.dark::after {
-    background-color: #d4af37;
-}
-
-
-
-/* IMAGES */
-.story-image {
-    display: flex;
-    width: 100%;
-    height: 450px;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    
-}
-
-.story-image img {
-    width: 90%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    transition: transform 0.4s ease;
-}
-
-.story-image img:hover {
-    transform: scale(1.03);
-}
-
-.story-image1 {
-    display: flex;
-    width: 100%;
-    height: 470px;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-color: #1a1919;
-}
-.story-image1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    transition: transform 0.4s ease;
-}
-
-.story-image1 img:hover {
-    transform: scale(1.03);
-}
-
-/* LINK */
-.story-text a {
-    color: #000000d0;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.05rem;
-    display: inline-block;
-    margin-top: 10px;
-    padding-top: 12px;
-    border-top: 2px solid #ffba26;
-    transition: all 0.3s ease;
-}
-
-.story-text a:hover {
-    color: #ffba26;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .story-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .story-text,
-    .story-image {
-        padding: 40px;
-        min-height: auto;
-    }
-
-    .story-text h1 {
-        font-size: 2.3rem;
-    }
-
-    .story-image {
-        height: 350px;
-    }
-
-    .story-image img {
-        width: 100%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Make sure text sits above overlay */
-.bio-container {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    
-}
-
-
-/* ===== Home Bio Section ===== */
-.home-bio {
-    position: relative;   /* Needed for overlay positioning */
-    background-image: url("stringsof.jpg");
-    background-size: cover;
-    background-position: center 35%;
-    text-align: left;
-    height: 600px;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.062);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Full overlay */
-.home-bio::before {
-    content: "";
-    position: absolute;
-    inset: 0;   /* Covers entire section */
-    background-color: rgba(0, 0, 0, 0.432); /* Adjust opacity here */
-}
-
-/* Make sure text sits above overlay */
-.bio-container {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    
-}
-
-.home-bio p {
-    font-size: 3rem;
-    color: white;
-    font-weight: bold;
-    line-height: 1.2;
-    padding: 15% 30% 0 10%;
-}
-
-
-
-.about-link a {
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.3em;
-    color: #111;
-    border: 1px solid transparent;
-    transition: all 0.3s ease-in-out; /* only this transition remains */
-}
-
-.about-link a:hover {
-    color: #b39c19;
-}
-
-
-
+/* =========================
+   FOOTER
+   ========================= */
 
 footer {
     background-color: rgba(0, 0, 0, 0.832);
     color: white;
-    padding: 30px 40px;
+
+    padding: 35px 40px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     text-align: center;
-}
-
-/* ===== Modern Contact Page Form ===== */
-.contact-form {
-    padding: 80px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    background-color: #1a1919; /* matches story section */
-}
-
-#form-status {
-    margin-top: 15px;
-    text-align: center;
-    width: 100%;
-    font-size: 1.1rem;
-}
-/* FORM WRAPPER (keeps contact-page structure, but adapted for dark background) */
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    width: 100%;
-    max-width: 520px;
-
-    padding: 40px;
-    border-radius: 10px;
-align-items: center;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    backdrop-filter: blur(10px);
-}
-
-/* INPUTS (kept consistent with contact page, just adapted for dark bg) */
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 14px 16px;
-
-    border: 1px solid #ccc;
-    border-radius: 8px;
-
-    font-family: Garamond, serif;
-    font-size: 1em;
-
-    background-color: rgba(255, 255, 255, 0.92);
-    color: #111;
-
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-}
-
-/* hover (same feel as contact page) */
-.contact-form input:hover,
-.contact-form textarea:hover {
-    border-color: rgba(255, 186, 38, 0.8);
-    background-color: rgba(255, 255, 255, 1);
-}
-
-/* focus (MATCHES contact page glow exactly) */
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: rgba(255, 186, 38, 0.8);
-    box-shadow: 0 0 10px rgba(255, 186, 38, 0.2);
-    outline: none;
-}
-
-/* BUTTON (IDENTICAL TO CONTACT PAGE — DO NOT CHANGE THIS) */
-.contact-form button {
-    padding: 14px 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.4s ease-in-out;
-}
-
-
-.contact-form button:hover {
-    background-color: rgba(255, 186, 38, 0.8);
-    color: black;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* =========================
-   HOME PAGE RESPONSIVE ONLY
+   RESPONSIVE BREAKPOINTS
    ========================= */
 
-/* TABLET */
-@media (max-width: 1024px) {
-
-    /* HERO OVERLAY */
-   .hero-contact-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* true centering */
-    width: 80%;
-    max-width: 420px;
-}
-
-    .hero {
-        position: relative;
-        height: auto;
-        box-shadow: none;
-        background-color: #fafafa;
-    }
-
-    /* SERVICES GRID */
+/* TABLET → 2 columns */
+@media (max-width: 1100px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    /* STORY */
-    .story-text {
-        padding: 60px;
-    }
-
-    .story-text h1 {
-        font-size: 3rem;
-    }
-
-    .ctasection h1 {
-        font-size: 3rem;
-    }
-
-    /* BIO TEXT */
-    .home-bio p {
-        font-size: 2.2rem;
-        padding: 10%;
-    }
 }
 
-@media (max-width: 970px) {
-     .hero-contact-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* true centering */
-    width: 75%;
-    max-width: 420px;
-          
-}
-}
-
-/* MOBILE */
+/* MOBILE → 1 column */
 @media (max-width: 768px) {
-
-    .hero {
-        height: auto;
-        box-shadow: none;
-        background-color: #fafafa;
-        position: relative;
-    }
-
-    .hero-image img {
-        height: auto;
-        display: block;
-    }
-
-    /* HERO */
-    .hero-image img {
-        height: 100vh;
-        object-fit: cover;
-    }
-
-    .hero-contact-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* true centering */
-    width: 80%;
-    max-width: 420px;
-}
-
-
-   
-   
-
-    /* SERVICES → STACK */
     .services-grid {
         grid-template-columns: 1fr;
-        
     }
 
-    .service-card {
-        height: auto;
-    }
-
-    /* STORY → STACK */
-    .story-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .story-text {
-        padding: 40px 25px;
-        text-align: center;
-        align-items: center;
-    }
-
-  
-
-    .story-text::after {
-        width: 60%;
-        margin: 0 auto 25px;
-    }
-
-    .story-text h1 {
-        font-size: 2.2rem;
-    }
-
-    .story-text.dark h1 {
-        font-size: 2.2rem;
-    }
-
-    .story-text.dark p {
-        font-size: 1.2rem;
-    }
-
-    .story-image1 {
-        height: 300px;
-    }
-
-    /* CTA */
-    .ctasection h1 {
-        font-size: 2.2rem;
-        padding: 0 20px;
-    }
-
-
-    /* BIO */
-    .home-bio {
-        height: 400px;
-    }
-
-    .home-bio p {
-        font-size: 1.6rem;
-        padding: 20px;
-    }
-
-
-    .contact-form {
-        padding: 40px 15px;
-    }
-
-    .contact-form form {
-        width: 80%;
-        max-width: 420px;   /* key change */
-        margin: 0 auto;     /* centers it */
-        padding: 30px;
-    }
-
-    .contact-form button {
-        padding: 12px 16px;
-    }
-
-    
-}
-
-
-/* SMALL MOBILE */
-@media (max-width: 480px) {
-
-    .hero {
-        position: relative;
-    }
-
-    .story-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .ctasection h1 {
-        font-size: 1.8rem;
-    }
-
-    .home-bio p {
-        font-size: 1.3rem;
-    }
-
-      .hero-contact-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* true centering */
-    width: 75%;
-    max-width: 420px;
-          
-}
-
-
-    .hero-contact-overlay .info-label {
-        font-size: 0.9em;
-    }
-
-    .hero-contact-overlay .info-value,
-    .hero-contact-overlay .info-valuep,
-    .info-item a {
-        font-size: 1em;
-    }
-}
-
-@media (max-height: 500px) and (orientation: landscape) {
-
-    /* =========================
-       HERO (FIXED IOS GAP ISSUE)
-       ========================= */
-    .hero {
-        height: 100dvh;
-        overflow: hidden;
-        line-height: 0;
-    }
-
-    .hero-image img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        display: block;
-    }
-
-    /* =========================
-       HERO OVERLAY (SPACING FIXED)
-       ========================= */
-    .hero-contact-overlay {
-        top: 52%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 75%;
-        max-width: 380px;
-
-        padding: 24px 26px;
-    }
-
-    .hero-contact-overlay .contact-info {
-        gap: 14px;
-    }
-
-    .hero-contact-overlay .info-item {
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-
-        padding-top: 12px;
-        padding-bottom: 12px;
-
-        border-bottom: 1px solid #00000055;
-    }
-
-    .hero-contact-overlay .info-label {
-        font-size: 0.95rem;
-        letter-spacing: 0.4px;
-        min-width: 80px;
-    }
-
-    .hero-contact-overlay .info-value,
-    .hero-contact-overlay .info-valuep,
-    .info-item a {
-        font-size: 1.05rem;
-    }
-
-    .hero-contact-overlay .about-link {
-        margin-top: 16px;
-    }
-
-    .hero-contact-overlay .about-link a {
-        font-size: 1.05rem;
-    }
-
-    /* =========================
-       SERVICES SECTION
-       ========================= */
     .services-section {
-        padding-top: 30px;
-    }
-
-    .services-section h2 {
-        font-size: 2rem;
-        padding-bottom: 30px;
-        margin-bottom: 0;
-    }
-
-    /* =========================
-       STORY SECTION
-       ========================= */
-    .story-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .story-text {
-        padding: 40px 30px;
-        text-align: center;
-        align-items: center;
-    }
-
-    .story-text h1,
-    .story-text.dark h1 {
-        font-size: 2.2rem;
-    }
-
-    .story-text.dark p {
-        font-size: 1.1rem;
-    }
-
-    /* IMAGE HEIGHT FIX (kids1 issue) */
-    .story-image1 {
-        height: 420px;
-    }
-
-    .story-image {
-        height: 380px;
-    }
-
-    .story-image1 img,
-    .story-image img {
-        object-fit: cover;
-        object-position: center;
-    }
-
-    /* =========================
-       CTA SECTION
-       ========================= */
-    .ctasection {
-        padding-top: 60px;
-    }
-
-    .ctasection h1 {
-        font-size: 2.3rem;
-    }
-
-    /* =========================
-       HOME BIO
-       ========================= */
-    .home-bio {
-        height: 320px;
-    }
-
-    .home-bio p {
-        font-size: 1.8rem;
-        padding: 40px;
+        padding: 40px 20px;
     }
 }
