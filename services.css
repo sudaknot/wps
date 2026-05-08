@@ -152,9 +152,9 @@ a[href^="mailto"] {
 .service-card li {
     color: #333;
 
-    font-size: clamp(1rem, 1vw, 1.3rem);
+    font-size: clamp(1.08rem, 1.35vw, 1.55rem);
 
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 .service-card p {
