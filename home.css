@@ -898,6 +898,15 @@ align-items: center;
         display: block;
     }
 
+    .service-card p,
+.service-card li {
+    font-size: 1.2rem;
+}
+
+footer {
+    font-size: 1rem;
+}
+
     /* =========================
        HERO OVERLAY (SPACING FIXED)
        ========================= */
