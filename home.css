@@ -172,7 +172,7 @@ a[href^="mailto"] {
     border-radius: 10px;
     border: 1px solid #ddd;
 
-    overflow: visible;   /* prevents text/content cutoff issues */
+    overflow: hidden;   /* prevents text/content cutoff issues */
     
     transition: transform 0.3s ease;
 
