@@ -1,3 +1,23 @@
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+:root {
+
+    /* CARD TYPOGRAPHY */
+    --card-title-size: 1.35rem;
+    --card-subtitle-size: 1.15rem;
+    --card-text-size: 1.1rem;
+    --card-list-size: 1.1rem;
+
+    /* FOOTER */
+    --footer-text-size: 1rem;
+
+    /* BODY CONTENT */
+    --body-text-size: 1.15rem;
+}
+
 .hero {
     position: relative;
     width: 100%;
@@ -8,7 +28,6 @@
     width: 100%;
     object-fit: cover;
     display: block;
-    
 }
 
 a[href^="mailto"] {
@@ -30,14 +49,12 @@ a[href^="mailto"] {
     max-width: 450px;
 }
 
-/* reuse your existing styling but ensure spacing works in overlay */
 .hero-contact-overlay .contact-info {
     padding: 0;
     margin: 0;
     gap: 18px;
 }
 
-/* info rows */
 .hero-contact-overlay .info-item {
     display: flex;
     justify-content: space-between;
@@ -52,7 +69,7 @@ a[href^="mailto"] {
 }
 
 .hero-contact-overlay .info-label {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #888;
     text-transform: uppercase;
@@ -60,37 +77,25 @@ a[href^="mailto"] {
     min-width: 90px;
 }
 
-.info-item a {
-    font-size: 1.4em;
+.info-item a,
+.hero-contact-overlay .info-value,
+.hero-contact-overlay .info-valuep {
+    font-size: 1.4rem;
     color: #111;
     text-align: right;
     flex: 1;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
-
 }
 
 .info-item a:hover {
     color: #ffba26;
 }
 
-.hero-contact-overlay .info-value,
-.hero-contact-overlay .info-valuep {
-    font-size: 1.4em;
-    color: #111;
-    text-align: right;
-    flex: 1;
-}
-
-.h
-
 .hero-contact-overlay .info-value {
     font-weight: 500;
 }
 
-
-
-/* About link inside overlay */
 .hero-contact-overlay .about-link {
     margin-top: 20px;
     text-align: center;
@@ -105,7 +110,7 @@ a[href^="mailto"] {
     display: inline-block;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     color: rgba(0, 0, 0, 0.288);
     padding: 10px 18px;
     transition: all 0.3s ease-in-out;
@@ -115,13 +120,12 @@ a[href^="mailto"] {
     color: #f8d300;
 }
 
-/* ===== Services Section ===== */
+/* ===== SERVICES SECTION ===== */
 
 .services-section {
     padding: 50px 10%;
     background-color: #fafafa;
     text-align: center;
-    
 }
 
 .services-section h2 {
@@ -140,16 +144,14 @@ a[href^="mailto"] {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    align-items: stretch; /* key line */
+    align-items: stretch;
 }
 
 .services-page,
 .secondary-services {
     padding: 40px 10%;
-    background-color: #f0f0f08c; /* soft ivory */
+    background-color: #f0f0f08c;
 }
-
-
 
 .services-title,
 .secondary-services h2 {
@@ -157,10 +159,11 @@ a[href^="mailto"] {
     font-size: 2rem;
     margin-bottom: 80px;
     position: relative;
-
 }
 
-
+/* =========================
+   SERVICE CARDS
+   ========================= */
 
 .service-card {
     display: flex;
@@ -172,18 +175,20 @@ a[href^="mailto"] {
     border-radius: 10px;
     border: 1px solid #ddd;
 
-    overflow: visible;   /* prevents text/content cutoff issues */
-    
-    transition: transform 0.3s ease;
+    overflow: visible;
 
-    height: 100%;        /* lets grid control equal height */
+    transition: all 0.3s ease;
+
+    height: 100%;
+
+    cursor: default;
 }
 
-.service-card p,
-.service-card ul {
-    flex-grow: 1;
+.service-card:hover {
+    border-color: #ffba26;
+    transform: translateY(-5px);
+    cursor: pointer;
 }
-
 
 .service-card img {
     width: 100%;
@@ -193,46 +198,57 @@ a[href^="mailto"] {
 
 .service-card h3 {
     position: relative;
-    font-size: 1.4rem;
     margin: 20px;
-}
+    margin-bottom: 15px;
 
-.service-card h4 {
-    position: relative;
-    font-size: 1.2rem;
-    margin: 20px;
-    
+    font-size: var(--card-title-size);
+    display: inline-block;
 }
-
 
 .service-card h3::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px; /* space below text */
+    bottom: -5px;
     width: 100%;
     height: 1px;
-    background-color: rgba(255, 186, 38, 0.695);
+    background-color: #ffba26;
+}
+
+.service-card h4 {
+    position: relative;
+    margin: 20px;
+
+    font-size: var(--card-subtitle-size);
 }
 
 .service-card p {
     margin: 0 20px 20px 20px;
-    line-height: 1.1;
+
     color: #333;
-    font-size: 1.2rem;
+    line-height: 1.6;
+
+    font-size: var(--card-text-size);
 }
 
 .service-card li {
     margin: 0 20px 20px 20px;
-    line-height: 1.2;
+
     color: #333;
-    font-size: 1.3rem;
+    line-height: 1.5;
+
+    font-size: var(--card-list-size);
 }
 
 .service-card ul {
     margin: 0 0 20px 0;
+    flex-grow: 1;
 }
 
+.service-card .price {
+    font-weight: bold;
+    color: black;
+}
 
 .service-tier {
     margin: 0 20px 20px 20px;
@@ -243,65 +259,20 @@ a[href^="mailto"] {
     font-weight: bold;
 }
 
-
-.service-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    cursor: default;
-}
-
-.service-card:hover {
-    border-color: #ffba26;
-    transform: translateY(-5px);
-    cursor: pointer;
-}
-
-.service-card h3 {
-    position: relative;
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-    display: inline-block; /* keeps underline only under text */
-}
-
-.service-card h3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px; /* space below text */
-    width: 100%;
-    height: 1px;
-    background-color: #ffba26;
-}
-
-.service-card .price {
-    font-weight: bold;
-    color: black;
-}
-
-.service-card p {
-    color: #333;
-    line-height: 1.6;
-}
-
-.service-card-link, .service-card-link:visited, .service-card-link:active {
-    text-decoration: none;
+.service-card-link,
+.service-card-link:visited,
+.service-card-link:active {
     text-decoration: none;
     color: black;
 }
-
-
 
 /* MAIN SECTION */
 .story-section {
     width: 100%;
     margin: 0;
     background: linear-gradient(to bottom, #fafafa, #f3f0ea);
-    
 }
 
-/* GRID LAYOUT */
 .story-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -310,7 +281,6 @@ a[href^="mailto"] {
     background-color: #1a1919;
 }
 
-/* TEXT BLOCKS */
 .story-text {
     display: flex;
     flex-direction: column;
@@ -320,7 +290,6 @@ a[href^="mailto"] {
     position: relative;
 }
 
-/* Decorative accent line */
 .story-text::after {
     content: "";
     width: 400px;
@@ -330,7 +299,6 @@ a[href^="mailto"] {
     border-radius: 4px;
 }
 
-/* Heading */
 .story-text h1 {
     font-size: 4rem;
     font-weight: 700;
@@ -339,40 +307,16 @@ a[href^="mailto"] {
     margin-bottom: 25px;
     max-width: 550px;
     letter-spacing: -1px;
-    
 }
 
-.ctasection {
-    background-color: #1a1919;
-    margin: 0;
-    padding-top: 100px;
-    padding-bottom: 20px;
-    align-items: center;
-    text-align: center;
-}
-
-
-.ctasection h1{
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1.15;
-    color: white;
-    letter-spacing: -1px;
-    
-
-}
-
-
-/* Paragraphs */
 .story-text p {
-    font-size: 1.15rem;
+    font-size: var(--body-text-size);
     font-weight: 500;
     line-height: 1.9;
     color: #333;
     max-width: 620px;
 }
 
-/* DARK BLOCK */
 .story-text.dark {
     background-color: #1a1919;
     color: white;
@@ -384,20 +328,13 @@ a[href^="mailto"] {
 }
 
 .story-text.dark h1 {
-    font-size: 4em;
-}
-
-.story-text.dark p {
-    font-size: 1.5em;
+    font-size: 4rem;
 }
 
 .story-text.dark::after {
     background-color: #d4af37;
 }
 
-
-
-/* IMAGES */
 .story-image {
     display: flex;
     width: 100%;
@@ -406,7 +343,6 @@ a[href^="mailto"] {
     align-items: center;
     justify-content: center;
     position: relative;
-    
 }
 
 .story-image img {
@@ -432,6 +368,7 @@ a[href^="mailto"] {
     position: relative;
     background-color: #1a1919;
 }
+
 .story-image1 img {
     width: 100%;
     height: 100%;
@@ -444,7 +381,6 @@ a[href^="mailto"] {
     transform: scale(1.03);
 }
 
-/* LINK */
 .story-text a {
     color: #000000d0;
     text-decoration: none;
@@ -461,54 +397,15 @@ a[href^="mailto"] {
     color: #ffba26;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .story-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .story-text,
-    .story-image {
-        padding: 40px;
-        min-height: auto;
-    }
-
-    .story-text h1 {
-        font-size: 2.3rem;
-    }
-
-    .story-image {
-        height: 350px;
-    }
-
-    .story-image img {
-        width: 100%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Make sure text sits above overlay */
 .bio-container {
     position: relative;
     z-index: 1;
     width: 100%;
-    
 }
-
 
 /* ===== Home Bio Section ===== */
 .home-bio {
-    position: relative;   /* Needed for overlay positioning */
+    position: relative;
     background-image: url("stringsof.jpg");
     background-size: cover;
     background-position: center 35%;
@@ -520,20 +417,11 @@ a[href^="mailto"] {
     justify-content: center;
 }
 
-/* Full overlay */
 .home-bio::before {
     content: "";
     position: absolute;
-    inset: 0;   /* Covers entire section */
-    background-color: rgba(0, 0, 0, 0.432); /* Adjust opacity here */
-}
-
-/* Make sure text sits above overlay */
-.bio-container {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.432);
 }
 
 .home-bio p {
@@ -544,44 +432,43 @@ a[href^="mailto"] {
     padding: 15% 30% 0 10%;
 }
 
-
-
 .about-link a {
     display: inline-block;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     color: #111;
     border: 1px solid transparent;
-    transition: all 0.3s ease-in-out; /* only this transition remains */
+    transition: all 0.3s ease-in-out;
 }
 
 .about-link a:hover {
     color: #b39c19;
 }
 
-
-
-
 footer {
     background-color: rgba(0, 0, 0, 0.832);
     color: white;
+
     padding: 30px 40px;
+
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    font-size: var(--footer-text-size);
+    line-height: 1.5;
 }
 
-/* ===== Modern Contact Page Form ===== */
+/* ===== CONTACT FORM ===== */
 .contact-form {
     padding: 80px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    display: flex;
     justify-content: center;
-    background-color: #1a1919; /* matches story section */
+    background-color: #1a1919;
 }
 
 #form-status {
@@ -590,7 +477,7 @@ footer {
     width: 100%;
     font-size: 1.1rem;
 }
-/* FORM WRAPPER (keeps contact-page structure, but adapted for dark background) */
+
 .contact-form form {
     display: flex;
     flex-direction: column;
@@ -601,14 +488,14 @@ footer {
 
     padding: 40px;
     border-radius: 10px;
-align-items: center;
+    align-items: center;
+
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
 
     backdrop-filter: blur(10px);
 }
 
-/* INPUTS (kept consistent with contact page, just adapted for dark bg) */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -618,7 +505,7 @@ align-items: center;
     border-radius: 8px;
 
     font-family: Garamond, serif;
-    font-size: 1em;
+    font-size: 1rem;
 
     background-color: rgba(255, 255, 255, 0.92);
     color: #111;
@@ -627,14 +514,12 @@ align-items: center;
     box-sizing: border-box;
 }
 
-/* hover (same feel as contact page) */
 .contact-form input:hover,
 .contact-form textarea:hover {
     border-color: rgba(255, 186, 38, 0.8);
     background-color: rgba(255, 255, 255, 1);
 }
 
-/* focus (MATCHES contact page glow exactly) */
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: rgba(255, 186, 38, 0.8);
@@ -642,7 +527,6 @@ align-items: center;
     outline: none;
 }
 
-/* BUTTON (IDENTICAL TO CONTACT PAGE — DO NOT CHANGE THIS) */
 .contact-form button {
     padding: 14px 20px;
     background-color: black;
@@ -650,12 +534,11 @@ align-items: center;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.4s ease-in-out;
 }
-
 
 .contact-form button:hover {
     background-color: rgba(255, 186, 38, 0.8);
@@ -664,111 +547,41 @@ align-items: center;
 }
 
 /* =========================
-   HOME PAGE RESPONSIVE ONLY
+   RESPONSIVE
    ========================= */
 
-/* TABLET */
 @media (max-width: 1024px) {
 
-    /* HERO OVERLAY */
-   .hero-contact-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* true centering */
-    width: 80%;
-    max-width: 420px;
-}
-
-    .hero {
-        position: relative;
-        height: auto;
-        box-shadow: none;
-        background-color: #fafafa;
+    .hero-contact-overlay {
+        width: 80%;
+        max-width: 420px;
     }
 
-    /* SERVICES GRID */
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* STORY */
     .story-text {
         padding: 60px;
     }
 
-    .story-text h1 {
-        font-size: 3rem;
-    }
-
+    .story-text h1,
     .ctasection h1 {
         font-size: 3rem;
     }
 
-    /* BIO TEXT */
     .home-bio p {
         font-size: 2.2rem;
         padding: 10%;
     }
 }
 
-@media (max-width: 970px) {
-     .hero-contact-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* true centering */
-    width: 75%;
-    max-width: 420px;
-          
-}
-}
-
-/* MOBILE */
 @media (max-width: 768px) {
 
-    .hero {
-        height: auto;
-        box-shadow: none;
-        background-color: #fafafa;
-        position: relative;
-    }
-
-    .hero-image img {
-        height: auto;
-        display: block;
-    }
-
-    /* HERO */
-    .hero-image img {
-        height: 100vh;
-        object-fit: cover;
-    }
-
-    .hero-contact-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* true centering */
-    width: 80%;
-    max-width: 420px;
-}
-
-
-   
-   
-
-    /* SERVICES → STACK */
     .services-grid {
         grid-template-columns: 1fr;
-        
     }
 
-    .service-card {
-        height: auto;
-    }
-
-    /* STORY → STACK */
     .story-grid {
         grid-template-columns: 1fr;
     }
@@ -779,37 +592,21 @@ align-items: center;
         align-items: center;
     }
 
-  
-
     .story-text::after {
         width: 60%;
         margin: 0 auto 25px;
     }
 
-    .story-text h1 {
+    .story-text h1,
+    .story-text.dark h1,
+    .ctasection h1 {
         font-size: 2.2rem;
-    }
-
-    .story-text.dark h1 {
-        font-size: 2.2rem;
-    }
-
-    .story-text.dark p {
-        font-size: 1.2rem;
     }
 
     .story-image1 {
         height: 300px;
     }
 
-    /* CTA */
-    .ctasection h1 {
-        font-size: 2.2rem;
-        padding: 0 20px;
-    }
-
-
-    /* BIO */
     .home-bio {
         height: 400px;
     }
@@ -819,37 +616,21 @@ align-items: center;
         padding: 20px;
     }
 
-
     .contact-form {
         padding: 40px 15px;
     }
 
     .contact-form form {
         width: 80%;
-        max-width: 420px;   /* key change */
-        margin: 0 auto;     /* centers it */
+        max-width: 420px;
+        margin: 0 auto;
         padding: 30px;
     }
-
-    .contact-form button {
-        padding: 12px 16px;
-    }
-
-    
 }
 
-
-/* SMALL MOBILE */
 @media (max-width: 480px) {
 
-    .hero {
-        position: relative;
-    }
-
-    .story-text h1 {
-        font-size: 1.8rem;
-    }
-
+    .story-text h1,
     .ctasection h1 {
         font-size: 1.8rem;
     }
@@ -858,33 +639,23 @@ align-items: center;
         font-size: 1.3rem;
     }
 
-      .hero-contact-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* true centering */
-    width: 75%;
-    max-width: 420px;
-          
-}
-
+    .hero-contact-overlay {
+        width: 75%;
+    }
 
     .hero-contact-overlay .info-label {
-        font-size: 0.9em;
+        font-size: 0.9rem;
     }
 
     .hero-contact-overlay .info-value,
     .hero-contact-overlay .info-valuep,
     .info-item a {
-        font-size: 1em;
+        font-size: 1rem;
     }
 }
 
 @media (max-height: 500px) and (orientation: landscape) {
 
-    /* =========================
-       HERO (FIXED IOS GAP ISSUE)
-       ========================= */
     .hero {
         height: 100dvh;
         overflow: hidden;
@@ -898,57 +669,15 @@ align-items: center;
         display: block;
     }
 
-    /* =========================
-       HERO OVERLAY (SPACING FIXED)
-       ========================= */
     .hero-contact-overlay {
         top: 52%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 75%;
         max-width: 380px;
-
         padding: 24px 26px;
     }
 
-    .hero-contact-overlay .contact-info {
-        gap: 14px;
-    }
-
-    .hero-contact-overlay .info-item {
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-
-        padding-top: 12px;
-        padding-bottom: 12px;
-
-        border-bottom: 1px solid #00000055;
-    }
-
-    .hero-contact-overlay .info-label {
-        font-size: 0.95rem;
-        letter-spacing: 0.4px;
-        min-width: 80px;
-    }
-
-    .hero-contact-overlay .info-value,
-    .hero-contact-overlay .info-valuep,
-    .info-item a {
-        font-size: 1.05rem;
-    }
-
-    .hero-contact-overlay .about-link {
-        margin-top: 16px;
-    }
-
-    .hero-contact-overlay .about-link a {
-        font-size: 1.05rem;
-    }
-
-    /* =========================
-       SERVICES SECTION
-       ========================= */
     .services-section {
         padding-top: 30px;
     }
@@ -959,9 +688,6 @@ align-items: center;
         margin-bottom: 0;
     }
 
-    /* =========================
-       STORY SECTION
-       ========================= */
     .story-grid {
         grid-template-columns: 1fr;
     }
@@ -977,11 +703,6 @@ align-items: center;
         font-size: 2.2rem;
     }
 
-    .story-text.dark p {
-        font-size: 1.1rem;
-    }
-
-    /* IMAGE HEIGHT FIX (kids1 issue) */
     .story-image1 {
         height: 420px;
     }
@@ -996,9 +717,6 @@ align-items: center;
         object-position: center;
     }
 
-    /* =========================
-       CTA SECTION
-       ========================= */
     .ctasection {
         padding-top: 60px;
     }
@@ -1007,9 +725,6 @@ align-items: center;
         font-size: 2.3rem;
     }
 
-    /* =========================
-       HOME BIO
-       ========================= */
     .home-bio {
         height: 320px;
     }
@@ -1019,3 +734,4 @@ align-items: center;
         padding: 40px;
     }
 }
+
