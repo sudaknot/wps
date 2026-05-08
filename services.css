@@ -193,7 +193,10 @@ a[href^="mailto"] {
 
     padding:
         clamp(40px, 5vw, 90px)
-        20px;
+        20px
+        0;
+
+    margin-bottom: 0;
 
     background-color: #f0f0f08c;
 }
