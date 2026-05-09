@@ -71,7 +71,7 @@ a[href^="mailto"] {
 /* ===== Layout ===== */
 .services-page,
 .secondary-services {
-    padding: clamp(40px, 6vw, 90px) clamp(10px, 8vw, 12%);
+    padding: clamp(40px, 6vw, 90px) clamp(5px, 8vw, 12%);
     background-color: #f0f0f08c;
 }
 
@@ -82,7 +82,7 @@ a[href^="mailto"] {
     /* default: 3 columns */
     grid-template-columns: repeat(3, 1fr);
 
-    gap: clamp(25px, 3vw, 50px);
+    gap: clamp(10px, 3vw, 50px);
 
     max-width: 1900px;
     margin: 0 auto;
