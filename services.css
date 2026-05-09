@@ -130,14 +130,14 @@ a[href^="mailto"] {
 /* ===== Text ===== */
 .service-card p {
     color: #333;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.05vw, 1.2rem);
     line-height: 1.6;
 }
 
 .service-card li {
     color: #333;
-    font-size: 1.3rem;
-    line-height: 1.2;
+    font-size: clamp(1rem, 1.1vw, 1.25rem);
+    line-height: 1.3;
 }
 
 .service-card p {
@@ -231,6 +231,17 @@ a[href^="mailto"] {
 
     .services-grid {
         max-width: 2100px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .service-card p {
+        font-size: 1.05rem;
+    }
+
+    .service-card li {
+        font-size: 1.05rem;
     }
 }
 
