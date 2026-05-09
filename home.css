@@ -682,6 +682,12 @@ align-items: center;
     /* SERVICES GRID */
      .services-grid {
         grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 650px;
     }
 
     /* STORY */
