@@ -189,23 +189,7 @@ a[href^="mailto"] {
 }
 
 /* ===== Footer ===== */
-footer {
-    background-color: rgba(0, 0, 0, 0.832);
-    color: white;
-    padding: clamp(35px, 4vw, 80px) clamp(25px, 8vw, 140px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
-footer p,
-footer a,
-footer span {
-    font-size: clamp(0.95rem, 1.2vw, 1.45rem);
-    line-height: 1.9;
-    letter-spacing: 0.2px;
-}
 
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 @media (max-width: 1200px) {
