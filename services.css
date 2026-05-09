@@ -208,6 +208,13 @@ footer span {
 }
 
 /* ===== RESPONSIVE BREAKPOINTS ===== */
+@media (max-width: 1200px) {
+    .services-page,
+    .secondary-services {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 
 /* 2 columns on medium screens */
 
