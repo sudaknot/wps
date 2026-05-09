@@ -211,6 +211,15 @@ a[href^="mailto"] {
     .services-grid {
         grid-template-columns: 1fr;
     }
+    .services-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 700px;
+    }
 
     .services-page,
     .secondary-services {
