@@ -210,11 +210,7 @@ footer span {
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 
 /* 2 columns on medium screens */
-@media (max-width: 1200px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+
 
 /* 1 column on phones */
 @media (max-width: 768px) {
