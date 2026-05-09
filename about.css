@@ -262,12 +262,15 @@ a[href^="mailto"] {
     }
 }
 
-/* ===== Mobile ===== */
-@media (max-width: 768px) {
-
+@media (max-width: 900px) {
     .about-container {
         flex-direction: column-reverse;
     }
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+
+  
 
     .about-text,
     .about-image {
