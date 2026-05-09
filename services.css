@@ -71,7 +71,7 @@ a[href^="mailto"] {
 /* ===== Layout ===== */
 .services-page,
 .secondary-services {
-    padding: clamp(40px, 6vw, 90px) clamp(20px, 8vw, 12%);
+    padding: clamp(40px, 6vw, 90px) clamp(10px, 8vw, 12%);
     background-color: #f0f0f08c;
 }
 
