@@ -195,16 +195,19 @@ a[href^="mailto"] {
 @media (max-width: 1200px) {
     .services-page,
     .secondary-services {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .services-grid {
+        gap: 20px;
     }
 }
-
 /* 2 columns on medium screens */
 
 
 /* 1 column on phones */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .services-grid {
         grid-template-columns: 1fr;
     }
