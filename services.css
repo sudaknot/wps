@@ -23,6 +23,14 @@ a[href^="mailto"] {
     text-decoration: none;
 }
 
+/* ===== Typography System (FIX) ===== */
+/* Desktop base sizes */
+.service-card p,
+.service-card li {
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
 /* ===== Hero ===== */
 .about-hero {
     position: relative;
@@ -84,11 +92,8 @@ a[href^="mailto"] {
 /* ===== GRID ===== */
 .services-grid {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: clamp(10px, 3vw, 50px);
-
     max-width: 1900px;
     margin: 0 auto;
 }
@@ -110,64 +115,38 @@ a[href^="mailto"] {
 /* ===== Headings ===== */
 .service-card h3 {
     font-size: clamp(1.5rem, 1.8vw, 2.4rem);
-
     margin: clamp(25px, 2vw, 40px);
-
     padding-top: 20px;
-
     position: relative;
-
     line-height: 1.2;
 }
 
 .service-card h3::after {
     content: "";
-
     position: absolute;
     left: 0;
     bottom: -8px;
-
     width: 100%;
     height: 1px;
-
     background-color: #ffba26;
 }
 
 .service-card h4 {
     font-size: clamp(1.1rem, 1.25vw, 1.6rem);
-
     margin: clamp(18px, 1.5vw, 28px);
-
     line-height: 1.3;
 }
 
 /* ===== Text ===== */
 .service-card p {
     color: #333;
-
-    font-size: clamp(1rem, 1.05vw, 1.2rem);
-
-    line-height: 1.6;
-
-    margin:
-        0
-        clamp(20px, 2vw, 35px)
-        clamp(20px, 2vw, 35px);
-
+    margin: 0 clamp(20px, 2vw, 35px) clamp(20px, 2vw, 35px);
     max-width: 75ch;
 }
 
 .service-card li {
     color: #333;
-
-    font-size: clamp(1rem, 1.1vw, 1.25rem);
-
-    line-height: 1.3;
-
-    margin:
-        0
-        clamp(20px, 2vw, 35px)
-        12px;
+    margin: 0 clamp(20px, 2vw, 35px) 12px;
 }
 
 .service-card ul {
@@ -186,13 +165,10 @@ a[href^="mailto"] {
 /* ===== Button ===== */
 .services-button {
     text-align: center;
-
     padding:
         clamp(40px, 5vw, 90px)
         20px
         0;
-
-    margin-bottom: 0;
 
     background-color: #f0f0f08c;
 }
@@ -210,7 +186,7 @@ a[href^="mailto"] {
     border: none;
     border-radius: 8px;
 
-    font-size: clamp(1rem, 1vw, 1.2rem);
+    font-size: 1rem;
 
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -222,17 +198,12 @@ a[href^="mailto"] {
 .services-button .btn:hover {
     background-color: rgba(255, 186, 38, 0.8);
     color: black;
-
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-
     transform: translateY(-2px);
 }
 
-/* ===== Footer ===== */
-
 /* ===== Responsive Breakpoints ===== */
 @media (max-width: 1200px) {
-
     .services-page,
     .secondary-services {
         padding-left: 40px;
@@ -244,7 +215,7 @@ a[href^="mailto"] {
     }
 }
 
-/* ===== 1 Column Layout ===== */
+/* ===== Mobile Layout ===== */
 @media (max-width: 1000px) {
 
     .services-grid {
@@ -272,20 +243,17 @@ a[href^="mailto"] {
 @media (max-width: 900px),
        (max-height: 500px) and (orientation: landscape) {
 
+    .service-card p,
+    .service-card li {
+        font-size: 1.05rem;
+    }
+
     .service-card h3 {
         font-size: 1.5rem;
     }
 
     .service-card h4 {
         font-size: 1.1rem;
-    }
-
-    .service-card p {
-        font-size: 1.05rem;
-    }
-
-    .service-card li {
-        font-size: 1.05rem;
     }
 
     .about-hero h2 {
@@ -299,7 +267,6 @@ a[href^="mailto"] {
 
 /* ===== Large Screens ===== */
 @media (min-width: 1800px) {
-
     html {
         font-size: 18px;
     }
