@@ -222,6 +222,13 @@ nav ul li a.active {
         padding: 6px 10px;
         text-align: center;
     }
+
+    footer p,
+    footer a,
+    footer span {
+        font-size: 1rem;
+    }
+
 }
 
 
