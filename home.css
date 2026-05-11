@@ -225,7 +225,8 @@ a[href^="mailto"] {
 .service-card h3::after {
     content: "";
     position: absolute;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -5px; /* space below text */
     width: 100%;
     height: 1px;
