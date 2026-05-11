@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | White Piano Services</title>
+
     <link rel="stylesheet" href="/style2.css">
     <link rel="stylesheet" href="/contact.css">
+
     <link rel="icon" href="/whitelofo.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/whitelofo.png">
-<link rel="apple-touch-icon" href="/whitelofo.png">
-    
+    <link rel="icon" type="image/png" sizes="32x32" href="/whitelofo.png">
+    <link rel="apple-touch-icon" href="/whitelofo.png">
 </head>
-  
 
 <body>
 
@@ -42,81 +43,85 @@
 
     </div>
 </header>
-    <main>
 
-<!-- ===== Contact Hero ===== -->
-<section class="contact-hero">
-    <h2>Let’s Talk About Your Piano</h2>
-</section>
+<!-- ✅ MAIN WRAPPER IS NOW CORRECTLY STRUCTURED -->
+<main>
 
-<!-- ===== Contact Content ===== -->
-<section class="contact-container">
+    <!-- ===== Contact Hero ===== -->
+    <section class="contact-hero">
+        <h2>Let’s Talk About Your Piano</h2>
+    </section>
 
-    <!-- Left Side: Contact Info -->
-    <div class="contact-info">
+    <!-- ===== Contact Content ===== -->
+    <section class="contact-container">
 
-        <div class="info-item">
-            <span class="info-label">Owner</span>
-            <span class="info-value">Daniel White</span>
+        <!-- Left Side: Contact Info -->
+        <div class="contact-info">
+
+            <div class="info-item">
+                <span class="info-label">Owner</span>
+                <span class="info-value">Daniel White</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-label">Email</span>
+                <span class="info-value">info@whitepianoservices.com</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-label">Phone</span>
+                <span class="info-value">(845) 260-1931 call or text</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-label">Serving</span>
+                <span class="info-valuep">Chester, Delaware, Montgomery Counties</span>
+            </div>
+
+            <div class="about-link">
+                <a href="/about/">Get to know me →</a>
+            </div>
+
         </div>
 
-        <div class="info-item">
-            <span class="info-label">Email</span>
-            <span class="info-value">info@whitepianoservices.com</span>
+        <!-- Right Side: Form -->
+        <div class="contact-form">
+
+            <form id="contact-form" action="https://formspree.io/f/mnjwvvle" method="POST">
+
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number">
+
+                <textarea name="message" placeholder="Tell us about your piano..." rows="6" required></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+            <p id="form-status"></p>
+
         </div>
 
-        <div class="info-item">
-            <span class="info-label">Phone</span>
-            <span class="info-value">(845) 260-1931 call or text</span>
-        </div>
+    </section>
 
-        <div class="info-item">
-            <span class="info-label">Serving:</span>
-            <span class="info-valuep">Chester, Delaware, Montgomery Counties</span>
-        </div>
+</main>
 
-        <div class="about-link">
-            <a href="/about/">Get to know me →</a>
-        </div>
-
-    </div>
-
-    <!-- Right Side: Form -->
-    <div class="contact-form">
-
-        <form id="contact-form" action="https://formspree.io/f/mnjwvvle" method="POST">
-
-            <input type="text" name="name" placeholder="Your Name" required>
-
-            <input type="email" name="email" placeholder="Your Email" required>
-
-            <input type="tel" name="phone" placeholder="Phone Number">
-
-            <textarea name="message" placeholder="Tell us about your piano..." rows="6" required></textarea>
-
-            <button type="submit">Send Message</button>
-
-        </form>
-
-        <p id="form-status"></p>
-
-    </div>
-
-</section>
-    </main>
-
+<!-- ===== FOOTER (correctly OUTSIDE main) ===== -->
 <footer>
-    <p>White Piano Services | Piano Tuning & Repair | TEL: <a href="tel:+18452601931">(845) 260-1931</a> | <a href="mailto:whitepianoservices@gmail.com">info@whitepianoservices.com
-                </a></p>
+    <p>
+        White Piano Services | Piano Tuning & Repair |
+        TEL: <a href="tel:+18452601931">(845) 260-1931</a> |
+        <a href="mailto:whitepianoservices@gmail.com">info@whitepianoservices.com</a>
+    </p>
 </footer>
-    </body>
 
 <!-- ===== Form Script ===== -->
 <script>
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 
-form.addEventListener("submit", async function(e) {
+form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const data = new FormData(form);
