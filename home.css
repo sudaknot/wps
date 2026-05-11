@@ -885,7 +885,7 @@ align-items: center;
     }
 }
 
-@media (max-height: 500px) and (orientation: landscape) {
+@media (max-height: 600px) and (orientation: landscape) {
 
     /* =========================
        HERO (FIXED IOS GAP ISSUE)
