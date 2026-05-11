@@ -1,4 +1,21 @@
-.hero {
+html {
+    font-size: 16px;
+    background-color: #f0f0f08c;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f08c;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+    background-color: #f0f0f08c;
+}.hero {
     position: relative;
     width: 100%;
     overflow: hidden;
