@@ -228,7 +228,7 @@ a[href^="mailto"] {
     left: 50%;
     transform: translateX(-50%);
     bottom: -5px; /* space below text */
-    width: 40%;
+    width: 25%;
     height: 1px;
     background-color: rgba(255, 186, 38, 0.695);
 }
