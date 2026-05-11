@@ -283,15 +283,7 @@ a[href^="mailto"] {
     display: inline-block; /* keeps underline only under text */
 }
 
-.service-card h3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px; /* space below text */
-    width: 25%;
-    height: 1px;
-    background-color: #ffba26;
-}
+
 
 .service-card .price {
     font-weight: bold;
