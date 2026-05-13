@@ -277,8 +277,8 @@ a[href^="mailto"] {
 }
 
 /* ===== Mobile + iPhone Landscape ===== */
-@media (max-width: 900px),
-       (max-height: 500px) and (orientation: landscape) {
+@media (max-width: 768px),
+       (max-height: 500px) and (orientation: landscape)
 
     .about-text,
     .about-image {
