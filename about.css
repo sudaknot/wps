@@ -268,7 +268,9 @@ a[href^="mailto"] {
 
 /* ===== Stacked Layout ===== */
 @media (max-width: 900px) {
-
+     .about-image {
+         max-height: 350px;
+     }
     .about-container {
         flex-direction: column-reverse;
     }
