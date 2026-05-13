@@ -23,12 +23,10 @@ a[href^="mailto"] {
 /* ===== About Hero ===== */
 .about-hero {
     position: relative;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
 
     min-height: clamp(250px, 40vh, 500px);
@@ -100,15 +98,12 @@ a[href^="mailto"] {
     line-height: 1.2;
 }
 
-
-
 .about-text p {
     line-height: 1.9;
     margin-top: 15px;
     color: #333;
 
     font-size: 1.2rem;
-
     max-width: 75ch;
 }
 
@@ -129,8 +124,8 @@ a[href^="mailto"] {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
-
     max-height: 850px;
+    display: block;
 }
 
 /* ===== Book Now Button ===== */
@@ -141,7 +136,6 @@ a[href^="mailto"] {
 
 .about-button .btn {
     display: inline-block;
-
     padding:
         clamp(14px, 1vw, 18px)
         clamp(20px, 2vw, 34px);
@@ -190,19 +184,15 @@ a[href^="mailto"] {
 .values-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     gap: clamp(20px, 2vw, 40px);
-
     max-width: 1800px;
     margin: 0 auto;
 }
 
 .value-card {
     padding: clamp(25px, 2vw, 45px);
-
     border: 1px solid #ddd;
     background-color: white;
-
     transition: all 0.3s ease;
 }
 
@@ -214,7 +204,6 @@ a[href^="mailto"] {
 .value-card h4 {
     margin-bottom: 20px;
     position: relative;
-
     font-size: clamp(1.2rem, 1.5vw, 1.8rem);
 }
 
@@ -225,28 +214,21 @@ a[href^="mailto"] {
 
 .value-card h4::after {
     content: "";
-
     position: absolute;
     left: 0;
     bottom: -8px;
-
     width: 100%;
     height: 1px;
-
     background-color: #ffba26;
 }
 
 /* ===== Links ===== */
 .about-link a {
     display: inline-block;
-
     text-decoration: none;
     font-weight: 600;
-
     font-size: clamp(1.1rem, 1.3vw, 1.5rem);
-
     color: #111;
-
     transition: all 0.3s ease-in-out;
 }
 
@@ -256,25 +238,17 @@ a[href^="mailto"] {
 
 /* ===== Tablet ===== */
 @media (max-width: 992px) {
-
     .values-grid {
         grid-template-columns: 1fr;
     }
 }
 
-/* ===== Stacked Layout ===== */
+/* ===== STACK BREAKPOINT (FIXED OVERLAP) ===== */
 @media (max-width: 900px) {
-     .about-image {
-         max-height: 350px;
-     }
+
     .about-container {
         flex-direction: column-reverse;
     }
-}
-
-/* ===== Mobile + iPhone Landscape ===== */
-@media (max-width: 768px),
-       (max-height: 500px) and (orientation: landscape) {
 
     .about-text,
     .about-image {
@@ -291,6 +265,11 @@ a[href^="mailto"] {
         object-fit: cover;
         display: block;
     }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px),
+       (max-height: 500px) and (orientation: landscape) {
 
     .about-text p {
         font-size: 1rem;
@@ -302,9 +281,8 @@ a[href^="mailto"] {
     }
 }
 
-/* ===== Large Desktop / Ultrawide ===== */
+/* ===== Large Desktop ===== */
 @media (min-width: 1500px) {
-
     html {
         font-size: 18px;
     }
