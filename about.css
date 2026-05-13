@@ -100,12 +100,18 @@ a[href^="mailto"] {
     line-height: 1.2;
 }
 
+@media (max-width: 900px),
+       (max-height: 500px) and (orientation: landscape) {
+           .about-image img {
+    max-height: 350px;
+}}
+
 .about-text p {
     line-height: 1.9;
     margin-top: 15px;
     color: #333;
 
-    font-size: clamp(1rem, 1vw, 1.25rem);
+    font-size: 1.2rem;
 
     max-width: 75ch;
 }
