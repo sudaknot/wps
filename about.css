@@ -303,7 +303,7 @@ a[href^="mailto"] {
 }
 
 /* ===== Large Desktop / Ultrawide ===== */
-@media (min-width: 1800px) {
+@media (min-width: 1500px) {
 
     html {
         font-size: 18px;
