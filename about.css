@@ -100,11 +100,7 @@ a[href^="mailto"] {
     line-height: 1.2;
 }
 
-@media (max-width: 900px),
-       (max-height: 500px) and (orientation: landscape) {
-           .about-image img {
-    max-height: 350px;
-}}
+
 
 .about-text p {
     line-height: 1.9;
@@ -277,7 +273,7 @@ a[href^="mailto"] {
 }
 
 /* ===== Mobile + iPhone Landscape ===== */
-@media (max-width: 768px),
+@media (max-width: 900px),
        (max-height: 500px) and (orientation: landscape)
 
     .about-text,
