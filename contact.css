@@ -289,6 +289,10 @@ a[href^="tel"] {
     .contact-hero h2 {
     font-size: 2em;
 }
+
+        .contact-container {
+    gap: 40px;
+}
 }
 
 @media screen and (max-width: 480px) {
