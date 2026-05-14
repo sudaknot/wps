@@ -260,6 +260,12 @@ a[href^="mailto"] {
 
     .about-image img {
         max-height: 350px;
+
+        width: auto;
+        max-width: 100%;
+        height: auto;
+
+        object-fit: contain;
     }
 }
 
@@ -277,11 +283,25 @@ a[href^="mailto"] {
         min-width: 0;
     }
 
+    .about-image {
+        display: flex;
+        justify-content: center;
+    }
+
     .about-image img {
-        width: 100%;
+
+        /* keeps full image visible */
+        width: auto;
+        height: auto;
+
+        /* responsive sizing */
+        max-width: 100%;
         max-height: 320px;
 
+        /* prevents cropping */
         object-fit: contain;
+
+        display: block;
     }
 
     .about-text p {
