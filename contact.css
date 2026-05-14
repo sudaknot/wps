@@ -105,6 +105,12 @@ a[href^="tel"] {
     gap: 20px;
 }
 
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .info-item {
     display: flex;
     justify-content: space-between;
@@ -151,7 +157,7 @@ a[href^="tel"] {
 .line {
     height: 1px;
     background-color: #ffba26;
-    margin: 12px 0 20px;
+    margin: 0;
 }
 .about-link p {
     font-size: 1.5em;
