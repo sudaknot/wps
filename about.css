@@ -258,6 +258,9 @@ a[href^="mailto"] {
     .values-grid {
         grid-template-columns: 1fr;
     }
+    .about-image img {
+    max-height: 350px;
+}
 }
 
 /* ===== Stacked Layout ===== */
