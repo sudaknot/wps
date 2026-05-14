@@ -109,7 +109,7 @@ a[href^="tel"] {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-bottom: 5px;
+    padding-bottom: 15px;
 }
 
 .info-item {
