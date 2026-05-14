@@ -118,7 +118,6 @@ a[href^="mailto"] {
 }
 
 /* ===== Image ===== */
-/* ===== Image ===== */
 .about-image {
     flex: 1;
     min-width: 320px;
@@ -262,14 +261,12 @@ a[href^="mailto"] {
 .about-link a:hover {
     color: #ffba26;
 }
+
 /* ===== Tablet ===== */
 @media (max-width: 992px) {
 
     .values-grid {
         grid-template-columns: 1fr;
-    }
-     .about-container {
-        flex-direction: reverse-column;
     }
 
     .about-image img {
@@ -288,13 +285,14 @@ a[href^="mailto"] {
        (max-height: 500px) and (orientation: landscape) {
 
     .about-container {
-        flex-direction: reverse-column;
+        flex-direction: column-reverse;
     }
 
     .about-text,
     .about-image {
         width: 100%;
         min-width: 0;
+        flex: unset;
     }
 
     .about-image {
@@ -304,15 +302,12 @@ a[href^="mailto"] {
 
     .about-image img {
 
-        /* keeps full image visible */
         width: auto;
         height: auto;
 
-        /* responsive sizing */
         max-width: 100%;
         max-height: 320px;
 
-        /* prevents cropping */
         object-fit: contain;
 
         display: block;
