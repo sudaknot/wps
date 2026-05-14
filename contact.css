@@ -109,6 +109,7 @@ a[href^="tel"] {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 10px;
 }
 
 .info-item {
@@ -167,7 +168,7 @@ a[href^="tel"] {
     text-decoration: none;
     font-size: 1.3em;
     color: #111;
-    padding: 25px 22px 12px 22px;
+    padding: 40px 22px 12px 22px;
     transition: all 0.3s ease-in-out;
    
 }
