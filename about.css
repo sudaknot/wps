@@ -285,7 +285,7 @@ a[href^="mailto"] {
        (max-height: 500px) and (orientation: landscape) {
 
     .about-container {
-        flex-direction: column;
+        flex-direction: reverse-column;
     }
 
     .about-text,
