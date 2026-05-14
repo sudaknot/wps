@@ -262,9 +262,12 @@ a[href^="mailto"] {
         flex-direction: column-reverse;
     }
 
-    .about-image {
-        height: 320px
+    .about-image img {
+        height: 320px;
+        width: auto;
         max-width: 100%;
+        object-fit: contain;
+    }
     
 }
 
