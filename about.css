@@ -253,20 +253,21 @@ a[href^="mailto"] {
 }
 
 /* ===== Tablet ===== */
-@media (max-width: 992px) {
+@media (max-width: 1000px) {
 
     .values-grid {
         grid-template-columns: 1fr;
     }
-}
-
-/* ===== Stacked Layout ===== */
-@media (max-width: 900px) {
-
     .about-container {
         flex-direction: column-reverse;
     }
+
+    .about-image {
+        height: 320px
+        max-width: 100%;
+    
 }
+
 
 /* ===== Mobile + iPhone Landscape ===== */
 @media (max-width: 900px),
