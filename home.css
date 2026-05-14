@@ -12,6 +12,15 @@ body {
     overflow-x: hidden;
 }
 
+.ctasection {
+    background-color: #1a1919;
+    margin-bottom: -1px;
+}
+
+.contact-form {
+    background-color: #1a1919;
+}
+
 main {
     flex: 1;
     background-color: #f0f0f08c;
