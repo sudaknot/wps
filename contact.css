@@ -109,7 +109,7 @@ a[href^="tel"] {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .info-item {
@@ -188,7 +188,6 @@ a[href^="tel"] {
 }
 
 .contact-form h3, .contact-info h3 {
-    margin-top: 30px;
     font-size: clamp(1.4rem, 2vw, 2.2rem);
     line-height: 1.2;
 }
