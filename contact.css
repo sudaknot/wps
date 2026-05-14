@@ -147,6 +147,11 @@ a[href^="tel"] {
     text-align: center;
 }
 
+.about-text .line {
+    height: 1px;
+    background-color: #ffba26;
+    margin: 12px 0 20px;
+}
 .about-link p {
     font-size: 1.5em;
 }
