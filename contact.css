@@ -274,6 +274,9 @@ a[href^="tel"] {
 
     }
 
+    .contact-form {
+        padding-top: 0px;
+
     .contact-form input,
     .contact-form textarea {
         padding: 12px 14px;
