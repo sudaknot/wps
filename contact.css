@@ -330,3 +330,12 @@ footer span {
     letter-spacing: 0.2px;
 }
 
+@media (max-width: 900px),
+       (max-height: 500px) and (orientation: landscape) {
+
+    .
+
+    .contact-info h3, .contact-form h3 {
+        font-size: 1.4rem;
+    }
+}
