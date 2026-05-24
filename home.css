@@ -827,6 +827,9 @@ align-items: center;
         padding: 0 20px;
     }
 
+    .services-section h2 {
+    font-size: 2.2rem;
+}
 
     /* BIO */
     .home-bio {
@@ -872,6 +875,10 @@ align-items: center;
     .ctasection h1 {
         font-size: 1.8rem;
     }
+
+    .services-section h2 {
+    font-size: 1.8rem;
+}
 
     .home-bio p {
         font-size: 1.3rem;
