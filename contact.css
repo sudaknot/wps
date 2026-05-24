@@ -177,6 +177,33 @@ a[href^="tel"] {
     color: #ffba26;
 }
 
+.link-box {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border-radius: 16px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    width: fit-content;
+}
+
+.about-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: opacity 0.2s ease;
+}
+
+.about-link a:hover {
+    opacity: 0.75;
+}
+
 /* ===== Contact Form ===== */
 .contact-form {
     flex: 1;
