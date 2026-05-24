@@ -187,7 +187,9 @@ a[href^="tel"] {
     font-size: 1.4rem;
     transition: opacity 0.2s ease;
     color: #111;
-    padding: 40px 22px 12px 22px;
+    display: block;
+    padding: 14px 22px;
+    text-align: center;
     transition: all 0.3s ease-in-out;
 }
 
