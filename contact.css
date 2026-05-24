@@ -167,17 +167,16 @@ a[href^="tel"] {
 
 
 .link-box {
-    border: 1px solid #ddd;
-    background: rgba(245, 245, 245, 0.75);
+    border-top: 1px solid #ffba26;
+    background: rgba(245, 245, 245, 0.9);
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: 16px;
     padding: 20px;
 
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 
     width: 100%;
 }
