@@ -163,45 +163,34 @@ a[href^="tel"] {
 .about-link p {
     font-size: 1.5em;
 }
-.about-link a {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 1.3em;
-    color: #111;
-    padding: 40px 22px 12px 22px;
-    transition: all 0.3s ease-in-out;
-   
-}
 
-.about-link a:hover {
-    color: #ffba26;
-}
+
 
 .link-box {
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
 
     border-radius: 16px;
     padding: 20px;
 
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 10px;
 
-    width: fit-content;
+    width: 100%;
 }
 
 .about-link a {
-    color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     transition: opacity 0.2s ease;
+    color: #111;
+    padding: 40px 22px 12px 22px;
+    transition: all 0.3s ease-in-out;
 }
 
 .about-link a:hover {
-    opacity: 0.75;
+    color: #ffba26;
 }
 
 /* ===== Contact Form ===== */
