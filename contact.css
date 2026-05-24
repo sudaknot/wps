@@ -167,11 +167,11 @@ a[href^="tel"] {
 
 
 .link-box {
-    padding: 20px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
 
     display: flex;
     flex-direction: column;
