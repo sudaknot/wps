@@ -12,6 +12,12 @@ body {
     overflow-x: hidden;
 }
 
+.widget {
+    background-color: #1a1919;
+    margin: 0;
+    width: 100%;
+}
+
 .ctasection {
     background-color: #1a1919;
     margin-bottom: -1px;
