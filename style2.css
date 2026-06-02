@@ -9,9 +9,7 @@ html, body {
     overflow-x: hidden;
 }
 
-:host {
-    max-width: none !important;
-}
+
 
 body {
     min-height: 100vh;
@@ -74,10 +72,8 @@ header {
     padding-left: 10px;
 }
 
-.widget {
-    margin: 0;
-    width: 100%;
-}
+
+
 
 .nav-center a,
 .nav-center a:visited,
