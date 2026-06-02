@@ -9,7 +9,11 @@ html, body {
     overflow-x: hidden;
 }
 
-
+.widget {
+    background-color: #1a1919;
+    margin: 0;
+    width: 100%;
+}
 
 body {
     min-height: 100vh;
