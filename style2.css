@@ -70,6 +70,10 @@ header {
     padding-left: 10px;
 }
 
+.widget {
+    margin: 0;
+}
+
 .nav-center a,
 .nav-center a:visited,
 .nav-center a:active {
