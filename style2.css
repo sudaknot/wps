@@ -72,6 +72,7 @@ header {
 
 .widget {
     margin: 0;
+    width: 100%;
 }
 
 .nav-center a,
