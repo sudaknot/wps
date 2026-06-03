@@ -12,6 +12,7 @@ html, body {
 .widget {
     background-color: #1a1919;
     margin: 0;
+    min-height: 600px;
     width: 100%;
 }
 
