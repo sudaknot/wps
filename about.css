@@ -312,4 +312,8 @@ a[href^="mailto"] {
     .values-grid {
         max-width: 2000px;
     }
+
+    .about-text p {
+        font-size: 1rem;
+    }
 }
