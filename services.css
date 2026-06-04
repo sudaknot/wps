@@ -134,7 +134,7 @@ a[href^="mailto"] {
 }
 
 .service-card h4 {
-    font-size: clamp(1.1rem, 1.25vw, 1.6rem);
+    font-size: 1.2rem;
 
     margin: clamp(18px, 1.5vw, 28px);
 
@@ -145,7 +145,7 @@ a[href^="mailto"] {
 .service-card p {
     color: #333;
 
-    font-size: clamp(1rem, 1.05vw, 1.2rem);
+    font-size: 1.2rem;
 
     line-height: 1.6;
 
