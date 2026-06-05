@@ -36,12 +36,13 @@ body {
     background-color: black;
     color: white;
 
-    border: none;
+    border: 1px solid white;
     border-radius: 8px;
 
-    font-size: clamp(1rem, 1vw, 1.2rem);
+    font-size: clamp(1rem, 1vw, 1.5rem);
 
     text-transform: uppercase;
+    font-weight: bold;
     letter-spacing: 1px;
     text-decoration: none;
 
