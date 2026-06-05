@@ -22,6 +22,38 @@ body {
     flex-direction: column;
 }
 
+.btn {
+    display: inline-block;
+
+    padding:
+        clamp(14px, 1vw, 18px)
+        clamp(20px, 2vw, 34px);
+
+    margin-top: 20px;
+    margin-bottom: 55px;
+
+    background-color: black;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: clamp(1rem, 1vw, 1.2rem);
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.btn:hover {
+    background-color: rgba(255, 186, 38, 0.8);
+    color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
 main {
     flex: 1;
 }
