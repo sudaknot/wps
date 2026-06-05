@@ -73,7 +73,9 @@ a[href^="mailto"] {
 /* ===== About Layout ===== */
 .about-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    gap: clamp(30px, 5vw, 80px);
     justify-content: center;
     gap: clamp(30px, 5vw, 80px);
 
