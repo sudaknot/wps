@@ -9,6 +9,11 @@ html, body {
     overflow-x: hidden;
 }
 
+.about-link h1 {
+    font-size: 1.6em;
+}
+
+
 .widget {
     background-color: #1a1919;
     margin: 0;
