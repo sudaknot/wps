@@ -119,149 +119,108 @@ a[href^="tel"] {
     z-index: 2;
 }
 
-/* ===== Layout ===== */
+
+/* ===== Contact Layout ===== */
+
 .contact-container {
     display: flex;
-    justify-content: center;
-    gap: 80px;
-    padding: 60px 10%;
-    flex-wrap: wrap;
-}
-
-/* ===== Contact Info ===== */
-.contact-info {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
-    padding: 10px 40px 40px 40px;
-    display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.contact-header {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding-bottom: 15px;
-}
-
-.info-item {
-    display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #eee;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 55px 10% 80px;
+    gap: 30px;
 }
 
-.info-item:last-child {
-    border-bottom: none;
+/* ===== Contact Heading ===== */
+
+.contact-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.info-label {
-    font-size: 0.9em;
-    font-weight: 600;
-    color: #888;
-    text-transform: uppercase;
-    min-width: 100px;
-}
-
-.info-value,
-.info-valuep {
-    font-size: 1.2em;
+.contact-heading h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin: 0;
     color: #111;
-    text-align: right;
-    flex: 1;
-}
-
-.info-value {
     font-weight: 500;
 }
 
-.info-valuep {
-
-}
-
-/* ===== About Link ===== */
-
-.about-link {
-    text-align: center;
-}
-
-.line {
+.contact-heading .line {
+    width: 100%;
     height: 1px;
     background-color: #ffba26;
-    margin: 0;
-}
-.about-link p {
-    font-size: 1.5em;
 }
 
+/* ===== Contact Information ===== */
 
-
-.link-box {
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    margin: 0;
-
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-
-    width: 100%;
-}
-
-.about-link a {
-    text-decoration: none;
-    font-size: 1.4rem;
-    transition: opacity 0.2s ease;
+.contact-intro {
+    font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+    line-height: 1.7;
+    margin: 0 0 35px;
     color: #111;
-    display: block;
-    padding: 14px 22px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
 }
 
-.about-link a:hover {
+.contact-intro a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-intro a:hover {
     color: #ffba26;
 }
 
 /* ===== Contact Form ===== */
-.contact-form {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
-    width: 100%;
-    padding: 10px 40px 40px 40px;
-    margin: 0 auto;
-}
 
-.contact-form h3, .contact-info h3 {
-    font-size: clamp(1.4rem, 2vw, 2.2rem);
-    line-height: 1.2;
+.contact-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .contact-form form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: center;
+    align-items: flex-start;
+    gap: 32px;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 650px;
+}
+
+.form-group label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    max-width: 500px;
-    padding: 14px 16px;
+    padding: 15px 18px;
+
     border: 1px solid #ccc;
     border-radius: 8px;
+
     font-family: Garamond, serif;
-    font-size: 1em;
+    font-size: 1.1rem;
+
     background-color: #fafafa;
     box-sizing: border-box;
+
     transition: all 0.3s ease;
     outline: none;
 }
@@ -279,19 +238,26 @@ a[href^="tel"] {
 }
 
 .contact-form textarea {
+    max-width: 100%;
     resize: vertical;
 }
 
 .contact-form button {
-    padding: 14px 20px;
+    padding: 14px 30px;
+
     background-color: black;
     color: white;
-    border: none;
+
+    border: 1px solid white;
     border-radius: 8px;
+
     cursor: pointer;
-    font-size: 1em;
+
+    font-family: Garamond, serif;
+    font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+
     transition: all 0.4s ease-in-out;
 }
 
@@ -299,35 +265,37 @@ a[href^="tel"] {
     background-color: rgba(255, 186, 38, 0.8);
     color: black;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
 }
 
-/* Status message */
+/* ===== Form Status ===== */
+
 #form-status {
     margin-top: 15px;
-    text-align: center;
+    text-align: left;
     width: 100%;
     font-size: 1.1rem;
 }
 
 /* ===== Responsive ===== */
+
 @media screen and (max-width: 768px) {
-    .contact-form{
-        padding: 0px 30px 30px 30px;
+
+    .contact-container {
+        padding: 40px 7% 60px;
+        gap: 25px;
     }
 
-     footer p,
-    footer a,
-    footer span {
-        font-size: 1rem;
+    .contact-intro {
+        margin-bottom: 20px;
     }
 
-    .contact-info {
-        padding: 30px 30px 0px 30px;
-
+    .contact-form form {
+        gap: 25px;
     }
 
-    .contact-form {
-        padding-top: 0px;
+    .form-group {
+        max-width: 100%;
     }
 
     .contact-form input,
@@ -336,42 +304,29 @@ a[href^="tel"] {
     }
 
     .contact-form button {
-        padding: 12px 16px;
+        padding: 12px 24px;
     }
-
-    .contact-hero h2 {
-    font-size: 2em;
-}
-
-        .contact-container {
-    gap: 50px;
-}
 }
 
 @media screen and (max-width: 480px) {
-   .info-label {
-        font-size: 0.9em;
+
+    .contact-container {
+        padding: 35px 6% 50px;
     }
 
-    .contact-form{
-        padding: 0px 30px 30px 30px;
+    .contact-heading h2 {
+        font-size: 2rem;
     }
 
-    .contact-info {
-        padding: 30px 30px 0px 30px;
-
+    .contact-intro {
+        font-size: 1.05rem;
     }
 
-    .info-value,
-    .info-valuep,
-    .info-item a {
-        font-size: 1em;
+    .form-group label {
+        font-size: 1.1rem;
     }
-
-    .contact-hero h2 {
-    font-size: 2em;
 }
-}
+
 
 footer {
     background-color: rgba(0, 0, 0, 0.832);
