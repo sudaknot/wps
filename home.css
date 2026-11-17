@@ -61,8 +61,27 @@ a[href^="mailto"] {
     background: rgba(255, 255, 255, 0.85);
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    padding: 40px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.hero-contact-overlay .about-link:first-child {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.hero-contact-overlay .contact-info {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 /* reuse your existing styling but ensure spacing works in overlay */
@@ -700,14 +719,7 @@ align-items: center;
 @media (max-width: 1024px) {
 
     /* HERO OVERLAY */
-   .hero-contact-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* true centering */
-    width: 80%;
-    max-width: 420px;
-}
+
 
     .hero {
         position: relative;
@@ -747,17 +759,6 @@ align-items: center;
     }
 }
 
-@media (max-width: 970px) {
-     .hero-contact-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* true centering */
-    width: 75%;
-    max-width: 420px;
-          
-}
-}
 
 /* MOBILE */
 @media (max-width: 768px) {
@@ -780,14 +781,7 @@ align-items: center;
         object-fit: cover;
     }
 
-    .hero-contact-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* true centering */
-    width: 80%;
-    max-width: 420px;
-}
+
 
 
    
@@ -897,15 +891,8 @@ align-items: center;
         font-size: 1.3rem;
     }
 
-      .hero-contact-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* true centering */
-    width: 75%;
-    max-width: 420px;
-          
-}
+      
+
 
 
     .hero-contact-overlay .info-label {
@@ -949,15 +936,7 @@ footer {
     /* =========================
        HERO OVERLAY (SPACING FIXED)
        ========================= */
-    .hero-contact-overlay {
-        top: 52%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 75%;
-        max-width: 380px;
-
-        padding: 24px 26px;
-    }
+    
 
     .hero-contact-overlay .contact-info {
         gap: 14px;
@@ -1065,5 +1044,22 @@ footer {
     .home-bio p {
         font-size: 1.8rem;
         padding: 40px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .hero-contact-overlay {
+        padding: 15px;
+    }
+
+    .hero-contact-overlay .info-label {
+        font-size: 0.9em;
+    }
+
+    .hero-contact-overlay .info-value,
+    .hero-contact-overlay .info-valuep,
+    .hero-contact-overlay .info-item a {
+        font-size: 1em;
     }
 }
