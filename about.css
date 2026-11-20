@@ -116,6 +116,8 @@ a[href^="mailto"] {
 .about-image {
     flex: 0 1 38%;
     min-width: 280px;
+    margin-top: -15px;
+    
 }
 
 .about-image img {
