@@ -724,7 +724,9 @@ align-items: center;
         justify-items: center;
     }
 
-    .service-card-link {
+    .service-card-link,
+    .service-card-link:nth-child(4),
+    .service-card-link:nth-child(5) {
         grid-column: auto;
         width: 100%;
         max-width: 650px;
