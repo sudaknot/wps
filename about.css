@@ -98,10 +98,10 @@ a[href^="mailto"] {
 }
 
 .about-text p {
-    line-height: 1.65;
+    line-height: 1.5;
     margin-top: 12px;
     color: #333;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     max-width: 75ch;
 }
 
