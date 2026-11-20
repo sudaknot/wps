@@ -73,18 +73,13 @@ a[href^="mailto"] {
 /* ===== About Layout ===== */
 .about-container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    gap: clamp(30px, 5vw, 80px);
-    justify-content: center;
-    gap: clamp(30px, 5vw, 80px);
+    gap: clamp(30px, 4vw, 65px);
 
-    padding:
-        clamp(40px, 6vw, 90px)
-        clamp(20px, 8vw, 12%);
+    padding: 35px clamp(30px, 6vw, 100px);
 
     flex-wrap: wrap;
-
     background-color: #fbfbfb1c;
 
     max-width: 1800px;
