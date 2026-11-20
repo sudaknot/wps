@@ -113,7 +113,7 @@ a[href^="tel"] {
 
 .contact-hero h2 {
     position: relative;
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
     margin: 0;
     color: white;
     z-index: 2;
