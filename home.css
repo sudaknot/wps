@@ -756,6 +756,26 @@ align-items: center;
     }
 }
 
+@media (max-width: 1024px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-card-link {
+        grid-column: auto;
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+}
+
 @media (max-width: 970px) {
      .hero-contact-overlay {
     position: absolute;
