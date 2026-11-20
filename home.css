@@ -706,61 +706,22 @@ align-items: center;
    ========================= */
 
 /* TABLET */
-@media (max-width: 1024px) {
-
-    /* HERO OVERLAY */
-   .hero-contact-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* true centering */
-    width: 80%;
-    max-width: 420px;
+) {
+    grid-column: 2 / span 2;
 }
 
-    .hero {
-        position: relative;
-        height: auto;
-        box-shadow: none;
-        background-color: #fafafa;
-    }
-
-    /* SERVICES GRID */
-     .services-grid {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
-
-    .service-card {
-        width: 100%;
-        max-width: 650px;
-    }
-
-    /* STORY */
-    .story-text {
-        padding: 60px;
-    }
-
-    .story-text h1 {
-        font-size: 3rem;
-    }
-
-    .ctasection h1 {
-        font-size: 3rem;
-    }
-
-    /* BIO TEXT */
-    .home-bio p {
-        font-size: 2.2rem;
-        padding: 10%;
-    }
+.service-card-link:nth-child(5) {
+    grid-column: 4 / span 2;
 }
+
+
 
 @media (max-width: 1024px) {
 
     .services-grid {
         grid-template-columns: 1fr;
         gap: 25px;
+        justify-items: center;
     }
 
     .service-card-link {
@@ -768,6 +729,7 @@ align-items: center;
         width: 100%;
         max-width: 650px;
         margin: 0 auto;
+        display: flex;
     }
 
     .service-card {
