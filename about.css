@@ -83,7 +83,8 @@ a[href^="mailto"] {
     background-color: #fbfbfb1c;
 
     max-width: 1800px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
+    
 }
 
 .about-text {
