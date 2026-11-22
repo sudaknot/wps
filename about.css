@@ -11,6 +11,16 @@ body {
     overflow-x: hidden;
 }
 
+
+
+.section-divider {
+    width: 85%;
+    max-width: 1100px;
+    height: 1px;
+    background-color: #ccc;
+    margin: 50px auto;
+}
+
 main {
     flex: 1;
 }
