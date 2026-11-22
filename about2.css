@@ -1,0 +1,315 @@
+/* ===== Base ===== */
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+}
+
+a[href^="mailto"] {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ===== About Hero ===== */
+.about-hero {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    min-height: clamp(250px, 40vh, 500px);
+
+    padding:
+        clamp(60px, 8vw, 120px)
+        clamp(20px, 5vw, 80px);
+
+    background-image: url("../images/aboutimg/tuningii.jpeg");
+    background-size: cover;
+    background-position: center 70%;
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.695);
+    z-index: 1;
+}
+
+.about-hero h2,
+.about-hero p {
+    position: relative;
+    color: white;
+    z-index: 2;
+    max-width: 1200px;
+}
+
+.about-hero h2 {
+    font-size: clamp(2.5rem, 4vw, 5rem);
+    margin-bottom: 15px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.about-hero p {
+    font-size: clamp(1.1rem, 2vw, 2.2rem);
+    line-height: 1.5;
+}
+
+/* ===== About Layout ===== */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(45px, 6vw, 90px);
+
+    padding: 50px clamp(45px, 8vw, 130px);
+
+    flex-wrap: wrap;
+    background-color: #fbfbfb1c;
+
+    max-width: 1800px;
+    margin: 0 auto 30px auto;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 320px;
+}
+
+.about-text h3 {
+    margin-top: 30px;
+    font-size: clamp(1.4rem, 2vw, 2.2rem);
+    line-height: 1.2;
+}
+
+.about-text p {
+    line-height: 1.5;
+    margin-top: 12px;
+    color: #333;
+    font-size: 1.2rem;
+    max-width: 75ch;
+}
+
+/* ===== Line Under Headings ===== */
+.about-text .line {
+    height: 1px;
+    background-color: #ffba26;
+    margin: 12px 0 20px;
+}
+
+/* ===== Image ===== */
+.about-image {
+    flex: 0 1 38%;
+    min-width: 280px;
+    margin-top: -15px;
+    
+}
+
+.about-image img {
+    width: 100%;
+    max-height: 600px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ===== Book Now Button ===== */
+.about-button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.about-button .btn {
+    display: inline-block;
+
+    padding:
+        clamp(14px, 1vw, 18px)
+        clamp(20px, 2vw, 34px);
+
+    margin-top: 20px;
+    margin-bottom: 55px;
+
+    background-color: black;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: clamp(1rem, 1vw, 1.2rem);
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.about-button .btn:hover {
+    background-color: rgba(255, 186, 38, 0.8);
+    color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* ===== Values Section ===== */
+.values-section {
+    background-color: #fafafa;
+
+    padding:
+        clamp(50px, 8vw, 110px)
+        clamp(20px, 8vw, 12%);
+
+    text-align: center;
+}
+
+.values-section h2 {
+    font-size: clamp(2rem, 3vw, 3.5rem);
+    margin-bottom: clamp(30px, 4vw, 70px);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: clamp(20px, 2vw, 40px);
+
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.value-card {
+    padding: clamp(25px, 2vw, 45px);
+
+    border: 1px solid #ddd;
+    background-color: white;
+
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    border-color: #1c5212;
+    transform: translateY(-5px);
+}
+
+.value-card h4 {
+    margin-bottom: 20px;
+    position: relative;
+
+    font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+}
+
+.value-card p {
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    line-height: 1.8;
+}
+
+.value-card h4::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #ffba26;
+}
+
+/* ===== Links ===== */
+.about-link a {
+    display: inline-block;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    font-size: clamp(1.1rem, 1.3vw, 1.5rem);
+
+    color: #111;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.about-link a:hover {
+    color: #ffba26;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 1000px) {
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-container {
+        flex-direction: column-reverse;
+    }
+
+    .about-image img {
+        height: 320px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+    
+}
+
+
+/* ===== Mobile + iPhone Landscape ===== */
+@media (max-width: 900px),
+       (max-height: 500px) and (orientation: landscape) {
+
+    .about-text,
+    .about-image {
+        min-width: 100%;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .about-text h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+}
+
+/* ===== Large Desktop / Ultrawide ===== */
+@media (min-width: 1800px) {
+
+    html {
+        font-size: 18px;
+    }
+
+    .about-container,
+    .values-grid {
+        max-width: 2000px;
+    }
+
+    .about-text p {
+        font-size: 1.5rem;
+    }
+}
