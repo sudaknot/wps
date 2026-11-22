@@ -264,7 +264,7 @@ a[href^="mailto"] {
 
     .about-image img {
         height: 320px;
-        width: auto;
+        width: 100%;
         max-width: 100%;
         object-fit: contain;
     }
