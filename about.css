@@ -70,61 +70,183 @@ a[href^="mailto"] {
     line-height: 1.5;
 }
 
-/* ===== About Layout ===== */
-.about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(45px, 6vw, 90px);
+/* ===== About Page Layout ===== */
 
-    padding: 50px clamp(45px, 8vw, 130px);
-
-    flex-wrap: wrap;
-    background-color: #fbfbfb1c;
-
-    max-width: 1800px;
-    margin: 0 auto 30px auto;
+.about-page {
+    width: 100%;
 }
+
+.about-section {
+    width: 100%;
+    padding: clamp(55px, 7vw, 100px) clamp(24px, 5vw, 80px);
+}
+
+.about-intro,
+.about-approach {
+    background-color: #fff;
+}
+
+.about-family {
+    background-color: #f7f7f5;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+    align-items: center;
+    gap: clamp(45px, 6vw, 100px);
+
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+/* Reverse the family section on desktop */
+.about-family .about-image {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.about-family .about-text {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* ===== Text ===== */
 
 .about-text {
-    flex: 1;
-    min-width: 320px;
+    width: 100%;
+    max-width: 750px;
 }
 
-.about-text h3 {
-    margin-top: 30px;
-    font-size: clamp(1.4rem, 2vw, 2.2rem);
+.about-text h2 {
+    font-size: clamp(1.8rem, 2.5vw, 2.7rem);
     line-height: 1.2;
+    margin: 0 0 15px;
+}
+
+.about-text .line {
+    width: 75px;
+    height: 2px;
+    background-color: #ffba26;
+    margin: 18px 0 25px;
 }
 
 .about-text p {
-    line-height: 1.5;
-    margin-top: 12px;
+    font-size: clamp(1.05rem, 1.15vw, 1.2rem);
+    line-height: 1.75;
     color: #333;
-    font-size: 1.2rem;
-    max-width: 75ch;
+    margin: 0 0 20px;
 }
 
-/* ===== Line Under Headings ===== */
-.about-text .line {
-    height: 1px;
-    background-color: #ffba26;
-    margin: 12px 0 20px;
-}
+/* ===== Images ===== */
 
-/* ===== Image ===== */
 .about-image {
-    flex: 0 1 38%;
-    min-width: 280px;
-    margin-top: -15px;
-    
+    width: 100%;
+    min-width: 0;
 }
 
 .about-image img {
+    display: block;
     width: 100%;
-    max-height: 600px;
-    border-radius: 10px;
+    height: auto;
+    max-height: 560px;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
+}
+
+/* ===== Booking Button ===== */
+
+.about-button {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.about-button .btn {
+    display: inline-block;
+    padding: 15px 28px;
+
+    background-color: #111;
+    color: white;
+
+    border-radius: 7px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+
+    transition: all 0.3s ease;
+}
+
+.about-button .btn:hover {
+    background-color: #ffba26;
+    color: #111;
+    transform: translateY(-2px);
+}
+
+/* ===== Tablet and Mobile ===== */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        padding: 55px 30px;
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    .about-image img {
+        max-height: 420px;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-family .about-image,
+    .about-family .about-text {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .about-section {
+        padding: 40px 22px;
+    }
+
+    .about-container {
+        gap: 25px;
+    }
+
+    .about-image img {
+        aspect-ratio: 5 / 4;
+        max-height: none;
+    }
+
+    .about-text h2 {
+        font-size: 1.65rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .about-button {
+        text-align: center;
+    }
 }
 
 /* ===== Book Now Button ===== */
