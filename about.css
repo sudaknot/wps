@@ -104,7 +104,11 @@ a[href^="mailto"] {
     font-size: 1.2rem;
     max-width: 75ch;
 }
-
+#line {
+    height: 1px;
+    background-color: #ffba26;
+    margin: 12px 0 20px;
+}
 /* ===== Line Under Headings ===== */
 .about-text .line {
     height: 1px;
