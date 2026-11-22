@@ -1,0 +1,462 @@
+
+/* ===== Base ===== */
+
+.cleaning-page {
+    flex: 1;
+    width: 100%;
+    color: #292725;
+    background-color: #f0f0f08c;
+}
+
+.cleaning-page *,
+.cleaning-page *::before,
+.cleaning-page *::after {
+    box-sizing: border-box;
+}
+
+.cleaning-page h2,
+.cleaning-page h3,
+.cleaning-page p {
+    margin-top: 0;
+}
+
+.cleaning-page h2 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 500;
+    line-height: 1.2;
+    color: #242321;
+}
+
+.cleaning-page p {
+    font-size: clamp(1.05rem, 1.2vw, 1.2rem);
+    line-height: 1.8;
+    color: #44413e;
+}
+
+.section-eyebrow {
+    display: block;
+    margin-bottom: 16px;
+    color: #a87917;
+    font-family: Arial, sans-serif;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+}
+
+
+/* ===== Hero ===== */
+
+.cleaning-hero {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: clamp(65px, 8vw, 115px) clamp(25px, 6vw, 90px);
+
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: clamp(40px, 7vw, 100px);
+}
+
+.cleaning-hero-content {
+    max-width: 650px;
+}
+
+.cleaning-hero-content h2 {
+    margin-bottom: 25px;
+}
+
+.cleaning-hero-content p {
+    margin-bottom: 20px;
+}
+
+.cleaning-hero-content .hero-description {
+    font-size: clamp(1.2rem, 1.45vw, 1.4rem);
+    line-height: 1.7;
+    color: #302e2b;
+}
+
+.cleaning-hero-image {
+    width: 100%;
+    min-width: 0;
+}
+
+.cleaning-hero-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #866014;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #c9a65d;
+    padding-bottom: 5px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.text-link span {
+    margin-left: 5px;
+}
+
+.text-link:hover {
+    color: #4d3914;
+    border-color: #4d3914;
+}
+
+
+/* ===== Pricing ===== */
+
+.cleaning-pricing {
+    padding: clamp(65px, 7vw, 100px) 25px;
+    background-color: #e9e7e2;
+    text-align: center;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 18px;
+}
+
+.section-heading p {
+    margin-bottom: 0;
+}
+
+.pricing-options {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    flex: 1;
+    max-width: 350px;
+    padding: 35px 25px;
+    background-color: #f8f7f4;
+    border: 1px solid #dedbd4;
+    border-top: 3px solid #d3a33d;
+}
+
+.piano-type {
+    display: block;
+    margin-bottom: 12px;
+    color: #5a554d;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+}
+
+.pricing-card .price {
+    margin-bottom: 5px;
+    color: #292725;
+    font-size: clamp(2.5rem, 4vw, 3.2rem);
+    line-height: 1.2;
+}
+
+.price-description {
+    color: #706a61;
+    font-size: 0.95rem;
+}
+
+.pricing-note {
+    margin: 25px 0 0;
+    font-size: 0.95rem !important;
+    color: #6b665e !important;
+}
+
+
+/* ===== Cleaning Details ===== */
+
+.cleaning-details {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: clamp(75px, 8vw, 115px) clamp(25px, 7vw, 100px);
+}
+
+.cleaning-details-intro {
+    max-width: 750px;
+    margin-bottom: 55px;
+}
+
+.cleaning-details-intro h2 {
+    margin-bottom: 20px;
+}
+
+.cleaning-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(35px, 6vw, 90px);
+    row-gap: 35px;
+}
+
+.cleaning-detail {
+    padding-top: 22px;
+    border-top: 1px solid #cfcac0;
+}
+
+.cleaning-detail h3 {
+    margin-bottom: 12px;
+    color: #302e2b;
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+.cleaning-detail p {
+    margin-bottom: 0;
+}
+
+
+/* ===== Action Cavity Feature ===== */
+
+.cleaning-feature {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+    gap: clamp(40px, 7vw, 100px);
+
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 30px clamp(25px, 6vw, 90px) 100px;
+}
+
+.cleaning-feature-image {
+    width: 100%;
+    min-width: 0;
+}
+
+.cleaning-feature-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.cleaning-feature-text {
+    max-width: 600px;
+}
+
+.cleaning-feature-text h2 {
+    margin-bottom: 22px;
+}
+
+.cleaning-feature-text p {
+    margin-bottom: 18px;
+}
+
+
+/* ===== Before and After ===== */
+
+.cleaning-comparison {
+    padding: clamp(70px, 8vw, 110px) clamp(25px, 6vw, 90px);
+    background-color: #e9e7e2;
+}
+
+.cleaning-comparison .section-heading {
+    margin-bottom: 45px;
+}
+
+.comparison-images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(20px, 3vw, 40px);
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.comparison-images figure {
+    min-width: 0;
+    margin: 0;
+}
+
+.comparison-images img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.comparison-images figcaption {
+    padding-top: 15px;
+    color: #514c44;
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+
+/* ===== Closing Section ===== */
+
+.cleaning-closing {
+    padding: clamp(75px, 8vw, 110px) 25px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cleaning-closing h2 {
+    margin-bottom: 20px;
+}
+
+.cleaning-closing p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.cleaning-button {
+    display: inline-block;
+    padding: 13px 30px;
+    background-color: #d5a33c;
+    color: #24211b;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid #c39534;
+    border-radius: 2px;
+    transition: background-color 0.2s ease;
+}
+
+.cleaning-button:hover {
+    background-color: #e2b653;
+}
+
+.closing-tuning-link {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    color: #80601e;
+    font-size: 0.98rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+/* ===== Responsive ===== */
+
+@media (min-width: 1800px) {
+    .cleaning-hero,
+    .cleaning-feature {
+        max-width: 1650px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .cleaning-hero {
+        grid-template-columns: 1fr 0.9fr;
+        gap: 35px;
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .cleaning-hero-content .hero-description {
+        font-size: 1.15rem;
+    }
+
+    .cleaning-page p {
+        font-size: 1.05rem;
+        line-height: 1.75;
+    }
+
+    .cleaning-feature {
+        gap: 35px;
+    }
+
+    .cleaning-detail-grid {
+        column-gap: 35px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .cleaning-hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 55px 25px 65px;
+    }
+
+    .cleaning-hero-content {
+        max-width: none;
+    }
+
+    .cleaning-hero-content h2 {
+        font-size: 2.1rem;
+    }
+
+    .cleaning-hero-content .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .cleaning-hero-image img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .cleaning-pricing {
+        padding: 65px 22px;
+    }
+
+    .pricing-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .pricing-card {
+        width: 100%;
+        max-width: 420px;
+        padding: 28px 20px;
+    }
+
+    .cleaning-details {
+        padding: 65px 25px;
+    }
+
+    .cleaning-details-intro {
+        margin-bottom: 35px;
+    }
+
+    .cleaning-detail-grid {
+        grid-template-columns: 1fr;
+        row-gap: 28px;
+    }
+
+    .cleaning-feature {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 10px 25px 70px;
+    }
+
+    .cleaning-feature-image img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .cleaning-comparison {
+        padding: 65px 22px;
+    }
+
+    .comparison-images {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .cleaning-closing {
+        padding: 65px 25px;
+    }
+
+}
