@@ -18,7 +18,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
-
+ box-sizing: border-box;
     gap: clamp(40px, 7vw, 110px);
 
     width: 100%;
