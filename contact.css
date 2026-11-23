@@ -37,8 +37,8 @@ a[href^="tel"] {
     align-items: center;
     text-align: center;
 
-    height: 60vh;
-    padding: 65px 25px;
+    min-height: 250px;
+    padding: 60px 20px;
 
     background-image: url("/test.jpg");
     background-size: cover;
