@@ -27,6 +27,7 @@ a[href^="tel"] {
 
 
 /* ===== Contact Hero ===== */
+/* ===== Contact Hero ===== */
 
 .contact-hero {
     position: relative;
@@ -36,33 +37,41 @@ a[href^="tel"] {
     align-items: center;
     text-align: center;
 
-    min-height: 300px;
-    padding: clamp(65px, 8vw, 105px) 25px;
+    min-height: clamp(280px, 32vw, 400px);
+    padding: 65px 25px;
 
-    background-color: #e9e7e2;
+    background-image: url("/test.jpg");
+    background-size: cover;
+    background-position: center 60%;
+    background-repeat: no-repeat;
+}
+
+.contact-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1;
 }
 
 .contact-hero h2 {
     position: relative;
-    margin: 0 0 18px;
+    z-index: 2;
 
-    color: #242321;
+    margin: 0;
+
+    color: #fff;
     font-size: clamp(2.2rem, 4vw, 3.2rem);
     font-weight: 500;
     line-height: 1.2;
 }
 
-.contact-hero::after {
-    content: "";
-    width: 65px;
-    height: 2px;
-    margin-top: 8px;
-    background-color: #d3a33d;
-}
-
 /* ===== Scheduling Button ===== */
 
 .btn {
+    position: relative;
+    z-index: 2;
+
     display: inline-block;
     margin-top: 28px;
 
@@ -79,7 +88,6 @@ a[href^="tel"] {
     font-weight: 600;
     letter-spacing: 0.04em;
     text-decoration: none;
-    text-transform: none;
 
     transition: background-color 0.2s ease,
                 transform 0.2s ease;
