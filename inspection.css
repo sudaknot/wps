@@ -1,0 +1,382 @@
+
+/* ========================================
+   INSPECTION PAGE
+======================================== */
+
+.inspection-page {
+    flex: 1;
+    width: 100%;
+    background-color: #fbfbfb;
+    overflow: hidden;
+    color: #292929;
+}
+
+.inspection-page * {
+    box-sizing: border-box;
+}
+
+.inspection-page h1,
+.inspection-page h2,
+.inspection-page h3 {
+    font-family: Garamond, Georgia, serif;
+    font-weight: 500;
+    color: #292929;
+}
+
+.inspection-page p {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #555;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.inspection-hero {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 75px 55px 80px;
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.inspection-hero-content {
+    max-width: 570px;
+}
+
+.inspection-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #a17b28;
+    margin-bottom: 18px;
+}
+
+.inspection-hero h1 {
+    font-size: clamp(38px, 4.5vw, 54px);
+    line-height: 1.1;
+    margin: 0 0 22px;
+}
+
+.inspection-hero .inspection-lead {
+    font-family: Garamond, Georgia, serif;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.inspection-hero-content p {
+    margin: 0 0 16px;
+}
+
+.inspection-hero-image {
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
+}
+
+.inspection-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ========================================
+   GENERAL SECTIONS
+======================================== */
+
+.inspection-section {
+    width: 100%;
+    padding: 75px max(6%, calc((100% - 1100px) / 2));
+}
+
+.inspection-section-heading {
+    margin-bottom: 40px;
+}
+
+.inspection-section-heading h2 {
+    font-size: 34px;
+    line-height: 1.2;
+    display: inline-block;
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #ffba26;
+}
+
+.inspection-section-heading > p {
+    max-width: 700px;
+    margin: 0;
+}
+
+
+/* ========================================
+   COMPONENTS
+======================================== */
+
+.inspection-components {
+    background-color: #f2f0eb;
+}
+
+.inspection-components-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 45px;
+    row-gap: 38px;
+}
+
+.inspection-component h3 {
+    font-size: 23px;
+    margin: 0 0 10px;
+}
+
+.inspection-component p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.inspection-disclaimer {
+    font-size: 13px !important;
+    color: #777 !important;
+    margin: 45px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid #d7d3cb;
+}
+
+
+/* ========================================
+   WRITTEN EVALUATION
+======================================== */
+
+.inspection-report {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 65px;
+    background-color: #fbfbfb;
+}
+
+.inspection-report-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.inspection-report-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.inspection-report-content {
+    max-width: 550px;
+}
+
+.inspection-report-content .inspection-section-heading {
+    margin-bottom: 20px;
+}
+
+.inspection-report-content p {
+    margin: 0 0 16px;
+}
+
+
+/* ========================================
+   PERSONAL STORY
+======================================== */
+
+.inspection-story {
+    background-color: #f2f0eb;
+}
+
+.inspection-story .inspection-section-heading {
+    margin-bottom: 25px;
+}
+
+.inspection-story-content {
+    max-width: 850px;
+}
+
+.inspection-story-content p {
+    margin: 0 0 18px;
+}
+
+.inspection-story-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   PRICING
+======================================== */
+
+.inspection-pricing {
+    background-color: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.inspection-pricing-inner {
+    width: 100%;
+    max-width: 650px;
+    padding: 35px 45px;
+    border: 1px solid #dedbd4;
+    background-color: #fff;
+}
+
+.inspection-pricing .inspection-section-heading {
+    margin-bottom: 18px;
+}
+
+.inspection-pricing .inspection-section-heading h2 {
+    margin-bottom: 0;
+}
+
+.inspection-price {
+    font-family: Garamond, Georgia, serif;
+    font-size: 52px;
+    color: #292929;
+    margin: 10px 0 15px;
+}
+
+.inspection-pricing p {
+    margin: 0 auto 15px;
+    max-width: 480px;
+}
+
+.inspection-pricing .inspection-travel-note {
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+}
+
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.inspection-contact {
+    background-color: #f2f0eb;
+    text-align: center;
+    padding: 65px 25px 75px;
+}
+
+.inspection-contact h2 {
+    font-size: 34px;
+    margin: 0 0 15px;
+}
+
+.inspection-contact p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+.inspection-contact-link {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #b18b37;
+    color: #292929;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.inspection-contact-link:hover {
+    background-color: #ffba26;
+    border-color: #ffba26;
+    color: #292929;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .inspection-hero {
+        padding: 60px 35px;
+        gap: 35px;
+    }
+
+    .inspection-hero-image {
+        height: 330px;
+    }
+
+    .inspection-components-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+
+    .inspection-report {
+        gap: 35px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .inspection-hero {
+        grid-template-columns: 1fr;
+        padding: 45px 25px 55px;
+        gap: 30px;
+    }
+
+    .inspection-hero h1 {
+        font-size: 39px;
+    }
+
+    .inspection-hero .inspection-lead {
+        font-size: 22px;
+    }
+
+    .inspection-hero-image {
+        height: 270px;
+    }
+
+    .inspection-section {
+        padding: 55px 25px;
+    }
+
+    .inspection-section-heading h2 {
+        font-size: 29px;
+    }
+
+    .inspection-components-grid {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .inspection-report {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .inspection-report-image {
+        height: 260px;
+    }
+
+    .inspection-pricing-inner {
+        padding: 30px 20px;
+    }
+
+    .inspection-contact {
+        padding: 55px 25px 65px;
+    }
+
+}
