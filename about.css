@@ -3,12 +3,20 @@
    ABOUT PAGE
 ======================================== */
 
+/* ===== Base ===== */
+
 .about-page {
     flex: 1;
     width: 100%;
-    background-color: #fbfbfb1c;
+    background-color: #f0f0f08c;
+    color: #44413e;
     overflow: hidden;
 }
+
+.about-page * {
+    box-sizing: border-box;
+}
+
 
 /* ========================================
    SECTION LAYOUT
@@ -18,17 +26,17 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
- box-sizing: border-box;
-    gap: clamp(40px, 7vw, 110px);
+
+    gap: clamp(40px, 6vw, 85px);
 
     width: 100%;
-    max-width: 1500px;
+    max-width: 1350px;
 
     margin: 0 auto;
 
     padding:
-        clamp(65px, 7vw, 105px)
-        clamp(30px, 8vw, 130px);
+        clamp(75px, 7vw, 105px)
+        clamp(30px, 6vw, 90px);
 }
 
 /* Alternating layout */
@@ -37,11 +45,22 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
-/* Subtle separation between sections */
+/* Section separation */
 
 .about-section + .about-section {
-    border-top: 1px solid #dedede;
+    border-top: 1px solid #dedbd4;
 }
+
+/* Subtle alternating backgrounds */
+
+.about-personal {
+    background-color: #e9e7e2;
+}
+
+.about-philosophy {
+    background-color: #f0f0f08c;
+}
+
 
 /* ========================================
    TEXT
@@ -49,49 +68,65 @@
 
 .about-text {
     min-width: 0;
-    max-width: 680px;
+    max-width: 650px;
 }
 
-.section-eyebrow {
+/* Eyebrow headings */
+
+.about-page .section-eyebrow {
     display: block;
 
-    margin-bottom: 14px;
+    margin: 0 0 14px;
 
-    color: #8b702f;
+    color: #a87917;
 
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    line-height: 1.4;
     text-transform: uppercase;
 }
 
-.about-text h2 {
-    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
-    line-height: 1.2;
-    font-weight: 600;
+/* Main headings */
 
-    margin: 0 0 18px;
+.about-text h2 {
+    margin: 0 0 20px;
+
+    color: #242321;
+
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 500;
+    line-height: 1.2;
 }
+
+/* Gold heading accent */
 
 .heading-accent {
-    width: 65px;
+    width: 60px;
     height: 2px;
 
-    background-color: #ffba26;
-
     margin-bottom: 28px;
+
+    background-color: #d3a33d;
 }
+
+/* Paragraphs */
 
 .about-text p {
-    color: #333;
-
-    font-size: clamp(1.2rem, 1.45vw, 1.4rem);
-    line-height: 1.8;
-
-    margin: 0 0 18px;
-
     max-width: 68ch;
+
+    margin: 0 0 20px;
+
+    color: #514d48;
+
+    font-size: clamp(1.05rem, 1.2vw, 1.2rem);
+    line-height: 1.8;
 }
+
+.about-text p:last-of-type {
+    margin-bottom: 0;
+}
+
 
 /* ========================================
    IMAGES
@@ -106,22 +141,18 @@
     display: block;
 
     width: 100%;
-    height: auto;
-
-    max-height: 580px;
-
-    aspect-ratio: 4 / 3;
+    height: 430px;
 
     object-fit: cover;
     object-position: center;
 
-    border-radius: 10px;
+    border-radius: 2px;
 }
 
 /* Childhood piano image */
 
 .about-childhood-image img {
-    aspect-ratio: 4 / 3;
+    object-position: center;
 }
 
 /* ========================================
@@ -135,32 +166,34 @@
 .about-button .btn {
     display: inline-block;
 
-    padding: 16px 30px;
+    padding: 14px 30px;
 
-    background-color: black;
-    color: white;
+    background-color: #d5a33c;
+    color: #24211b;
 
-    border: none;
-    border-radius: 8px;
+    border: 1px solid #c39534;
+    border-radius: 2px;
 
-    font-size: 1rem;
-    font-weight: 500;
+    font-family: Garamond, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
 
-    text-transform: uppercase;
-    letter-spacing: 1px;
     text-decoration: none;
+    text-transform: none;
 
-    transition: all 0.3s ease;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .about-button .btn:hover {
-    background-color: rgba(255, 186, 38, 0.8);
-    color: black;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #e2b653;
+    color: #24211b;
 
     transform: translateY(-2px);
 }
+
 
 /* ========================================
    TABLET
@@ -168,28 +201,26 @@
 
 @media (max-width: 1000px) {
 
-    .about-section,
-    .about-personal {
-        grid-template-columns: 1fr 1fr;
-
+    .about-section {
         gap: 35px;
-
-        padding: 65px 6%;
-    }
-
-    .about-text p {
-        font-size: 1rem;
-        line-height: 1.75;
+        padding: 70px 6%;
     }
 
     .about-text h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1.05rem;
+        line-height: 1.75;
     }
 
     .about-image img {
-        max-height: 450px;
+        height: 350px;
     }
+
 }
+
 
 /* ========================================
    MOBILE
@@ -201,12 +232,11 @@
     .about-personal {
         display: flex;
         flex-direction: column;
-
         align-items: stretch;
 
         gap: 28px;
 
-        padding: 45px 24px;
+        padding: 60px 25px;
     }
 
     .about-text {
@@ -214,34 +244,23 @@
     }
 
     .about-text h2 {
-        font-size: 1.7rem;
+        font-size: 1.9rem;
     }
 
     .about-text p {
-        font-size: 1rem;
+        font-size: 1.05rem;
         line-height: 1.75;
     }
 
-    .section-eyebrow {
-        font-size: 0.7rem;
+    .about-page .section-eyebrow {
+        font-size: 0.75rem;
     }
 
     .heading-accent {
-        margin-bottom: 22px;
+        margin-bottom: 23px;
     }
 
-    .about-image {
-        width: 100%;
-    }
-
-    .about-image img {
-        width: 100%;
-        max-height: none;
-        aspect-ratio: 4 / 3;
-        object-fit: cover;
-    }
-
-    /* Keep the image above the text on mobile */
+    /* Images above text on mobile */
 
     .about-section .about-image {
         order: 1;
@@ -251,16 +270,30 @@
         order: 2;
     }
 
+    .about-image {
+        width: 100%;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+
     .about-button {
-        text-align: center;
+        margin-top: 28px;
     }
 
     .about-button .btn {
+        display: block;
         width: 100%;
+        padding: 15px 20px;
         text-align: center;
-        box-sizing: border-box;
     }
+
 }
+
 
 /* ========================================
    SMALL MOBILE
@@ -270,26 +303,33 @@
 
     .about-section,
     .about-personal {
-        padding: 38px 20px;
+        padding: 48px 20px;
     }
 
     .about-text h2 {
-        font-size: 1.55rem;
+        font-size: 1.7rem;
     }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
 }
+
 
 /* ========================================
    LARGE DESKTOP
 ======================================== */
 
-@media (min-width: 1800px) {
+@media (min-width: 1600px) {
 
     .about-section {
-        max-width: 1650px;
-        gap: 120px;
+        max-width: 1450px;
+        gap: 100px;
     }
 
-    .about-text p {
-        font-size: 1.25rem;
+    .about-image img {
+        height: 460px;
     }
+
 }
