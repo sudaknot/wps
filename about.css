@@ -26,23 +26,20 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
-
     gap: clamp(40px, 6vw, 85px);
 
     width: 100%;
-    max-width: 1350px;
-
-    margin: 0 auto;
-
+    max-width: none;
+    margin: 0;
     padding:
         clamp(75px, 7vw, 105px)
-        clamp(30px, 6vw, 90px);
+        max(30px, calc((100% - 1170px) / 2));
 }
 
-/* Alternating layout */
-
 .about-personal {
+    display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
 }
 
 /* Section separation */
