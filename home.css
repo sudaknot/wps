@@ -421,7 +421,7 @@ main * {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 390px;
+    min-height: 500px;
     padding: 75px 30px;
     overflow: hidden;
     background-image: url("/stringsof.jpg");
