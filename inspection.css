@@ -38,16 +38,16 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 70px 55px;
+    padding: 75px 55px 80px;
 
     display: grid;
-    grid-template-columns: 1.4fr 0.8fr;
+    grid-template-columns: 1.05fr 0.95fr;
     align-items: center;
-    gap: 70px;
+    gap: 65px;
 }
 
 .inspection-hero-content {
-    max-width: 650px;
+    max-width: 570px;
 }
 
 .inspection-eyebrow {
@@ -76,42 +76,17 @@
     margin: 0 0 16px;
 }
 
-
-/* ========================================
-   PRICE CARD
-======================================== */
-
-.inspection-price-card {
-    padding: 35px 30px;
-    background-color: #f2f0eb;
-    border: 1px solid #dedbd4;
-    text-align: center;
+.inspection-hero-image {
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
 }
 
-.inspection-price-label {
-    font-size: 12px;
-    letter-spacing: 1.8px;
-    color: #8a713c;
-}
-
-.inspection-price {
-    font-family: Garamond, Georgia, serif;
-    font-size: 55px;
-    color: #292929;
-    margin: 12px 0;
-}
-
-.inspection-price-card p {
-    font-size: 15px;
-    margin: 0 0 20px;
-}
-
-.inspection-travel-note {
-    border-top: 1px solid #d7d3cb;
-    padding-top: 16px;
-    font-size: 13px;
-    line-height: 1.6;
-    color: #777;
+.inspection-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 
@@ -121,18 +96,18 @@
 
 .inspection-section {
     width: 100%;
-    padding: 65px max(6%, calc((100% - 1100px) / 2));
+    padding: 75px max(6%, calc((100% - 1100px) / 2));
 }
 
 .inspection-section-heading {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .inspection-section-heading h2 {
     font-size: 34px;
     line-height: 1.2;
     display: inline-block;
-    margin: 0 0 15px;
+    margin: 0 0 18px;
     padding-bottom: 12px;
     border-bottom: 2px solid #ffba26;
 }
@@ -144,47 +119,74 @@
 
 
 /* ========================================
-   INSPECTION DETAILS
+   COMPONENTS
 ======================================== */
 
-.inspection-details {
+.inspection-components {
     background-color: #f2f0eb;
 }
 
-.inspection-details-layout {
+.inspection-components-grid {
     display: grid;
-    grid-template-columns: 1fr 0.9fr;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 45px;
+    row-gap: 38px;
+}
+
+.inspection-component h3 {
+    font-size: 23px;
+    margin: 0 0 10px;
+}
+
+.inspection-component p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.inspection-disclaimer {
+    font-size: 13px !important;
+    color: #777 !important;
+    margin: 45px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid #d7d3cb;
+}
+
+
+/* ========================================
+   WRITTEN EVALUATION
+======================================== */
+
+.inspection-report {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
     align-items: center;
     gap: 65px;
+    background-color: #fbfbfb;
 }
 
-.inspection-details-list ul {
-    padding-left: 22px;
-    margin: 0 0 22px;
-}
-
-.inspection-details-list li {
-    padding: 7px 0;
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.inspection-details-list p {
-    margin: 0;
-}
-
-.inspection-details-image {
+.inspection-report-image {
     width: 100%;
-    height: 310px;
+    height: 350px;
     overflow: hidden;
 }
 
-.inspection-details-image img {
+.inspection-report-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.inspection-report-content {
+    max-width: 550px;
+}
+
+.inspection-report-content .inspection-section-heading {
+    margin-bottom: 20px;
+}
+
+.inspection-report-content p {
+    margin: 0 0 16px;
 }
 
 
@@ -193,7 +195,11 @@
 ======================================== */
 
 .inspection-story {
-    background-color: #fbfbfb;
+    background-color: #f2f0eb;
+}
+
+.inspection-story .inspection-section-heading {
+    margin-bottom: 25px;
 }
 
 .inspection-story-content {
@@ -201,11 +207,57 @@
 }
 
 .inspection-story-content p {
-    margin: 0 0 16px;
+    margin: 0 0 18px;
 }
 
 .inspection-story-content p:last-child {
     margin-bottom: 0;
+}
+
+
+/* ========================================
+   PRICING
+======================================== */
+
+.inspection-pricing {
+    background-color: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.inspection-pricing-inner {
+    width: 100%;
+    max-width: 650px;
+    padding: 35px 45px;
+    border: 1px solid #dedbd4;
+    background-color: #fff;
+}
+
+.inspection-pricing .inspection-section-heading {
+    margin-bottom: 18px;
+}
+
+.inspection-pricing .inspection-section-heading h2 {
+    margin-bottom: 0;
+}
+
+.inspection-price {
+    font-family: Garamond, Georgia, serif;
+    font-size: 52px;
+    color: #292929;
+    margin: 10px 0 15px;
+}
+
+.inspection-pricing p {
+    margin: 0 auto 15px;
+    max-width: 480px;
+}
+
+.inspection-pricing .inspection-travel-note {
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
 }
 
 
@@ -216,7 +268,7 @@
 .inspection-contact {
     background-color: #f2f0eb;
     text-align: center;
-    padding: 60px 25px 70px;
+    padding: 65px 25px 75px;
 }
 
 .inspection-contact h2 {
@@ -257,7 +309,16 @@
         gap: 35px;
     }
 
-    .inspection-details-layout {
+    .inspection-hero-image {
+        height: 330px;
+    }
+
+    .inspection-components-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+
+    .inspection-report {
         gap: 35px;
     }
 
@@ -272,7 +333,7 @@
 
     .inspection-hero {
         grid-template-columns: 1fr;
-        padding: 45px 25px 50px;
+        padding: 45px 25px 55px;
         gap: 30px;
     }
 
@@ -284,29 +345,38 @@
         font-size: 22px;
     }
 
-    .inspection-price-card {
-        padding: 28px 22px;
+    .inspection-hero-image {
+        height: 270px;
     }
 
     .inspection-section {
-        padding: 50px 25px;
+        padding: 55px 25px;
     }
 
     .inspection-section-heading h2 {
         font-size: 29px;
     }
 
-    .inspection-details-layout {
+    .inspection-components-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        row-gap: 30px;
     }
 
-    .inspection-details-image {
-        height: 250px;
+    .inspection-report {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .inspection-report-image {
+        height: 260px;
+    }
+
+    .inspection-pricing-inner {
+        padding: 30px 20px;
     }
 
     .inspection-contact {
-        padding: 50px 25px 60px;
+        padding: 55px 25px 65px;
     }
 
 }
