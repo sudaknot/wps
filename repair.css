@@ -51,11 +51,14 @@
 }
 
 .repair-eyebrow {
-    display: inline-block;
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #a17b28;
-    margin-bottom: 18px;
+    display: block;
+    margin-bottom: 16px;
+    color: #a87917;
+    font-family: Arial, sans-serif;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+
 }
 
 .repair-hero h1 {
