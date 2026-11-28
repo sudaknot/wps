@@ -1,409 +1,330 @@
 
-/* ========================================
-   REPAIR PAGE
-======================================== */
-
-.repair-page {
-    flex: 1;
-    width: 100%;
-    background-color: #fbfbfb;
-    overflow: hidden;
-    color: #292929;
-}
-
-.repair-page * {
-    box-sizing: border-box;
-}
-
-.repair-page h1,
-.repair-page h2,
-.repair-page h3 {
-    font-family: Garamond, Georgia, serif;
-    font-weight: 500;
-    color: #292929;
-}
-
-.repair-page p {
-    line-height: 1.8;
-    font-size: 16px;
-    color: #555;
-}
-
-
-/* ========================================
-   HERO
-======================================== */
-
-.repair-hero {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 75px 55px 80px;
-
-    display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    align-items: center;
-    gap: 65px;
-}
-
-.repair-hero-content {
-    max-width: 570px;
-}
-
-.repair-eyebrow {
-    display: inline-block;
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #a17b28;
-    margin-bottom: 18px;
-}
-
-.repair-hero h1 {
-    font-size: clamp(38px, 4.5vw, 54px);
-    line-height: 1.1;
-    margin: 0 0 22px;
-}
-
-.repair-hero .repair-lead {
-    font-family: Garamond, Georgia, serif;
-    font-size: 24px;
-    line-height: 1.4;
-    color: #444;
-    margin-bottom: 20px;
-}
-
-.repair-hero-content p {
-    margin: 0 0 16px;
-}
-
-.repair-hero-image {
-    width: 100%;
-    height: 390px;
-    overflow: hidden;
-}
-
-.repair-hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-
-/* ========================================
-   GENERAL SECTIONS
-======================================== */
-
-.repair-section {
-    width: 100%;
-    padding: 75px max(6%, calc((100% - 1100px) / 2));
-}
-
-.repair-section-heading {
-    margin-bottom: 40px;
-}
-
-.repair-section-heading h2 {
-    font-size: 34px;
-    line-height: 1.2;
-    display: inline-block;
-    margin: 0 0 18px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #ffba26;
-}
-
-.repair-section-heading > p {
-    max-width: 750px;
-    margin: 0;
-}
-
-
-/* ========================================
-   REPAIR EXAMPLES
-======================================== */
-
-.repair-examples {
-    background-color: #f2f0eb;
-}
-
-.repair-example {
-    display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    align-items: center;
-    gap: 60px;
-    margin-bottom: 65px;
-}
-
-.repair-example:last-of-type {
-    margin-bottom: 0;
-}
-
-.repair-example-reverse .repair-example-image {
-    order: 2;
-}
-
-.repair-example-reverse .repair-example-content {
-    order: 1;
-}
-
-.repair-example-image {
-    width: 100%;
-    height: 310px;
-    overflow: hidden;
-}
-
-.repair-example-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.repair-example-content {
-    max-width: 520px;
-}
-
-.repair-example-number {
-    display: inline-block;
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #a17b28;
-    margin-bottom: 12px;
-}
-
-.repair-example-content h3 {
-    font-size: 29px;
-    line-height: 1.2;
-    margin: 0 0 18px;
-}
-
-.repair-example-content p {
-    margin: 0 0 15px;
-}
-
-.repair-example-content p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* ========================================
-   ADDITIONAL REPAIRS
-======================================== */
-
-.repair-additional {
-    border-top: 1px solid #d7d3cb;
-    margin-top: 65px;
-    padding-top: 35px;
-    max-width: 850px;
-}
-
-.repair-additional h3 {
-    font-size: 25px;
-    margin: 0 0 15px;
-}
-
-.repair-additional p {
-    margin: 0 0 15px;
-}
-
-
-/* ========================================
-   MULTIPLE SOLUTIONS
-======================================== */
-
-.repair-solutions {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    align-items: center;
-    gap: 65px;
-    background-color: #fbfbfb;
-}
-
-.repair-solutions-image {
-    width: 100%;
-    height: 360px;
-    overflow: hidden;
-}
-
-.repair-solutions-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.repair-solutions-content {
-    max-width: 550px;
-}
-
-.repair-solutions-content .repair-section-heading {
-    margin-bottom: 20px;
-}
-
-.repair-solutions-content p {
-    margin: 0 0 16px;
-}
-
-
-/* ========================================
-   EVALUATION
-======================================== */
-
-.repair-evaluation {
-    background-color: #f2f0eb;
-}
-
-.repair-evaluation .repair-section-heading {
-    margin-bottom: 25px;
-}
-
-.repair-evaluation-content {
-    max-width: 850px;
-}
-
-.repair-evaluation-content p {
-    margin: 0 0 18px;
-}
-
-.repair-evaluation-content p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* ========================================
-   CONTACT
-======================================== */
-
-.repair-contact {
-    background-color: #fbfbfb;
-    text-align: center;
-    padding: 70px 25px 80px;
-}
-
-.repair-contact h2 {
-    font-size: 34px;
-    margin: 0 0 15px;
-}
-
-.repair-contact p {
-    max-width: 620px;
-    margin: 0 auto 25px;
-}
-
-.repair-contact-link {
-    display: inline-block;
-    padding: 12px 30px;
-    border: 1px solid #b18b37;
-    color: #292929;
-    text-decoration: none;
-    font-size: 15px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.repair-contact-link:hover {
-    background-color: #ffba26;
-    border-color: #ffba26;
-    color: #292929;
-}
-
-
-/* ========================================
-   TABLET
-======================================== */
-
-@media (max-width: 900px) {
-
-    .repair-hero {
-        padding: 60px 35px;
-        gap: 35px;
-    }
-
-    .repair-hero-image {
-        height: 330px;
-    }
-
-    .repair-example {
-        gap: 35px;
-    }
-
-    .repair-example-image {
-        height: 280px;
-    }
-
-    .repair-solutions {
-        gap: 35px;
-    }
-
-}
-
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media (max-width: 650px) {
-
-    .repair-hero {
-        grid-template-columns: 1fr;
-        padding: 45px 25px 55px;
-        gap: 30px;
-    }
-
-    .repair-hero h1 {
-        font-size: 39px;
-    }
-
-    .repair-hero .repair-lead {
-        font-size: 22px;
-    }
-
-    .repair-hero-image {
-        height: 270px;
-    }
-
-    .repair-section {
-        padding: 55px 25px;
-    }
-
-    .repair-section-heading h2 {
-        font-size: 29px;
-    }
-
-    .repair-example {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        margin-bottom: 50px;
-    }
-
-    .repair-example-reverse .repair-example-image,
-    .repair-example-reverse .repair-example-content {
-        order: initial;
-    }
-
-    .repair-example-image {
-        height: 250px;
-    }
-
-    .repair-example-content h3 {
-        font-size: 26px;
-    }
-
-    .repair-additional {
-        margin-top: 45px;
-        padding-top: 30px;
-    }
-
-    .repair-solutions {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .repair-solutions-image {
-        height: 260px;
-    }
-
-    .repair-contact {
-        padding: 55px 25px 65px;
-    }
-
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Piano Repair | White Piano Services</title>
+    <meta name="description" content="Piano repair and maintenance for strings, action components, keys, and other mechanical issues. Explore repair options with White Piano Services.">
+
+    <link rel="stylesheet" href="/style2.css">
+    <link rel="stylesheet" href="/repair.css">
+    <link rel="icon" href="/whitelofo.png">
+</head>
+
+<body>
+
+    <!-- KEEP YOUR EXISTING SITE HEADER HERE -->
+    <!-- HEADER — LEFT UNCHANGED -->
+    <header>
+        <div class="navbar">
+
+            <div class="nav-left">
+                <a href="/home/">
+                    <img src="/whitelogosvg.svg" alt="White Services Logo">
+                </a>
+            </div>
+
+            <div class="nav-center">
+                <a href="/home/">
+                    <h1>White Piano Services</h1>
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <nav>
+                    <ul id="navbarlist">
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/index.html#services">Services</a></li>
+                        <li><a href="/home/#reviews">Reviews</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="repair-page">
+
+        <!-- INTRODUCTION -->
+        <section class="repair-hero">
+
+            <div class="repair-hero-content">
+
+                <span class="repair-eyebrow">WHITE PIANO SERVICES</span>
+
+                <h1>Piano Repair</h1>
+
+                <p class="repair-lead">
+                    Thoughtful solutions to keep your piano playing.
+                </p>
+
+                <p>
+                    From individual broken parts to issues that
+                    affect how an entire piano plays, many problems
+                    can be addressed through careful repair and
+                    adjustment.
+                </p>
+
+                <p>
+                    I'll take the time to understand what's going
+                    on, explain the available options, and help
+                    determine an appropriate solution for your
+                    instrument.
+                </p>
+
+            </div>
+
+            <div class="repair-hero-image">
+                <img
+                    src="/IMG_5716.jpeg"
+                    alt="Piano action and internal components during repair">
+            </div>
+
+        </section>
+
+
+        <!-- REPAIR EXAMPLES -->
+        <section class="repair-section repair-examples">
+
+            <div class="repair-section-heading">
+
+                <h2>Repair Work</h2>
+
+                <p>
+                    Pianos contain many individual components,
+                    and problems can arise in different areas
+                    of the instrument. Here are a few examples
+                    of repairs that may be needed.
+                </p>
+
+            </div>
+
+
+            <!-- STRING SPLICING -->
+            <div class="repair-example">
+
+                <div class="repair-example-image">
+                    <img
+                        src="/IMG_6190.jpeg"
+                        alt="Piano string splice repair">
+                </div>
+
+                <div class="repair-example-content">
+
+                    <span class="repair-example-number">01</span>
+
+                    <h3>String Splicing & Replacement</h3>
+
+                    <p>
+                        Piano strings can break for a variety
+                        of reasons, including age, corrosion,
+                        and the stresses of normal use.
+                    </p>
+
+                    <p>
+                        Depending on the location of the break
+                        and the condition of the string, a splice
+                        may be an option. This involves joining
+                        the broken string with an additional
+                        section of wire. When appropriate, this
+                        can be a practical alternative to replacing
+                        the entire string.
+                    </p>
+
+                    <p>
+                        In other situations, replacing the
+                        string may be the more appropriate
+                        solution. The best approach depends
+                        on the individual circumstances.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTION REPAIRS -->
+            <div class="repair-example repair-example-reverse">
+
+                <div class="repair-example-image">
+                    <img
+                        src="/IMG_6193.jpeg"
+                        alt="Piano action components undergoing repair">
+                </div>
+
+                <div class="repair-example-content">
+
+                    <span class="repair-example-number">02</span>
+
+                    <h3>Action & Mechanical Repairs</h3>
+
+                    <p>
+                        The piano action contains many moving
+                        parts that work together every time
+                        a key is played. Individual components
+                        can wear, become damaged, or stop
+                        functioning properly.
+                    </p>
+
+                    <p>
+                        Repairs may include replacing broken
+                        hammer shanks, repairing or replacing
+                        worn springs, repinning action centers,
+                        and addressing other mechanical issues.
+                    </p>
+
+                    <p>
+                        These repairs help restore proper
+                        movement and function to the affected
+                        components.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- KEY REPAIRS -->
+            <div class="repair-example">
+
+                <div class="repair-example-image">
+                    <img
+                        src="/IMG_3959.jpeg"
+                        alt="Piano keys being repaired">
+                </div>
+
+                <div class="repair-example-content">
+
+                    <span class="repair-example-number">03</span>
+
+                    <h3>Key & Keyboard Repairs</h3>
+
+                    <p>
+                        Keyboard issues can range from loose
+                        or damaged keytops to keys that stick,
+                        wobble, or fail to return properly.
+                    </p>
+
+                    <p>
+                        Depending on the issue, repairs may
+                        involve rebushing keys, replacing
+                        damaged keytops, or correcting
+                        mechanical problems affecting
+                        key movement.
+                    </p>
+
+                    <p>
+                        The goal is to restore smooth,
+                        consistent operation across
+                        the keyboard.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADDITIONAL REPAIRS -->
+            <div class="repair-additional">
+
+                <h3>Other Repairs & Maintenance</h3>
+
+                <p>
+                    Not every piano problem fits neatly into
+                    one category. I also address a variety
+                    of other issues involving the action,
+                    keyboard, strings, and related components.
+                </p>
+
+                <p>
+                    If something isn't working as it should,
+                    feel free to reach out. I can help
+                    determine whether it's something
+                    I can address and what the next
+                    steps might look like.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVALUATION -->
+        <section class="repair-section repair-evaluation">
+
+            <div class="repair-section-heading">
+
+                <h2>Understanding What Your Piano Needs</h2>
+
+                <p>
+                    Before recommending a repair, it's
+                    important to understand the condition
+                    of the instrument and the nature
+                    of the problem.
+                </p>
+
+            </div>
+
+            <div class="repair-evaluation-content">
+
+                <p>
+                    Some issues are relatively simple
+                    to identify and address, while
+                    others may require a closer
+                    examination to determine their
+                    underlying cause.
+                </p>
+
+                <p>
+                    I'll explain what I find, discuss
+                    any appropriate repair options,
+                    and provide an estimate based
+                    on the work involved before
+                    proceeding.
+                </p>
+
+                <p>
+                    Not every repair is necessarily
+                    worth undertaking. The piano's
+                    overall condition, intended use,
+                    and the owner's goals all matter
+                    when deciding how to move forward.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section class="repair-contact">
+
+            <h2>Something Not Working Quite Right?</h2>
+
+            <p>
+                Whether it's a broken string, a sticking
+                key, or another issue with your piano,
+                I'd be happy to help you figure out
+                what's going on.
+            </p>
+
+            <a href="/contact.html" class="repair-contact-link">
+                Get in Touch
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- KEEP YOUR EXISTING SITE FOOTER HERE -->
+    <footer>
+        <p>White Piano Services | Piano Tuning & Repair | TEL: <a href="tel:+18452601931">(845) 260-1931</a> | <a href="mailto:whitepianoservices@gmail.com">info@whitepianoservices.com
+                    </a></p>
+    </footer>
+
+</body>
+</html>
